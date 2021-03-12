@@ -17,6 +17,7 @@ public class battleManager : MonoBehaviour
     public GameObject StressBar;
     public TextMeshProUGUI turnIndicator;
     public GameObject baseMenu;
+    public float sliderSmoothing;
     [Header("Temporary")]
     //TODO: make this dynamic (make the battle manager spawn the enemy to allow for different people to spawn in from the same screen)
     public GameObject enemy;
@@ -96,9 +97,15 @@ public class battleManager : MonoBehaviour
     private void updateUI() 
     {
         //updates status bars
-        socialStatusSlider.value = socialStatus;
-        stressSlider.value = stress;
-
+        if (socialStatusSlider.value != socialStatus) 
+        {
+            //Lerp function to make status bars move smooth
+            socialStatusSlider.value = Mathf.Lerp(socialStatusSlider.value, socialStatus, sliderSmoothing * Time.deltaTime);
+        }
+        if (stressSlider.value != stress)
+        {
+            stressSlider.value = Mathf.Lerp(stressSlider.value, stress, sliderSmoothing * Time.deltaTime);
+        }
         //updates turn indicator
         switch (state)
         {
