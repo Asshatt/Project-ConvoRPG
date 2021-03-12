@@ -54,10 +54,10 @@ public class battleManager : MonoBehaviour
     {
         baseMenu.SetActive(false);
         //this big ass one liner basically just randomly selects a response from the enemies responses
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         enemyResponse = enemyUnit.chooseResponse(enemyUnit.responses);
         dialogue.setOpponentDialogue(enemyResponse.responseText);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         state = battleState.playerTurn;
         playerTurn();
     }
@@ -79,6 +79,7 @@ public class battleManager : MonoBehaviour
     //TODO: Make the action here dependent on player action
     IEnumerator playerRespond(int moveIndex) 
     {
+        state = 0;
         dialogue.setOpponentDialogue("");
         socialStatus += 0.1f;
         if (socialStatus >= 1) 
@@ -88,8 +89,8 @@ public class battleManager : MonoBehaviour
             yield break;
         }
 
+        yield return new WaitForSeconds(0.5f);
         state = battleState.enemyTurn;
-        yield return new WaitForSeconds(1);
         StartCoroutine(enemyTurn());
     }
 
@@ -102,6 +103,7 @@ public class battleManager : MonoBehaviour
             //Lerp function to make status bars move smooth
             socialStatusSlider.value = Mathf.Lerp(socialStatusSlider.value, socialStatus, sliderSmoothing * Time.deltaTime);
         }
+
         if (stressSlider.value != stress)
         {
             stressSlider.value = Mathf.Lerp(stressSlider.value, stress, sliderSmoothing * Time.deltaTime);
