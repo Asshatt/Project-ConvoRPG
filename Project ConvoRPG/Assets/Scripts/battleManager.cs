@@ -24,6 +24,7 @@ public class battleManager : MonoBehaviour
 
 
     response enemyResponse;
+    response lastEnemyResponse;
     //variables defined in code
     float socialStatus = 0.1f;
     float stress = 0.5f;
@@ -52,10 +53,18 @@ public class battleManager : MonoBehaviour
     //void which executes proper action for enemy turn
     IEnumerator enemyTurn()
     {
+        bool loop = true;
+
         baseMenu.SetActive(false);
         //this big ass one liner basically just randomly selects a response from the enemies responses
         yield return new WaitForSeconds(0.5f);
-        enemyResponse = enemyUnit.chooseResponse(enemyUnit.responses);
+        //this while loop prevents the enemy from choosing the same response twice in a row
+        while (loop)
+        {
+            enemyResponse = enemyUnit.chooseResponse(enemyUnit.responses);
+            if(enemyResponse != lastEnemyResponse){ loop = false; }
+        }
+        lastEnemyResponse = enemyResponse;
         dialogue.setOpponentDialogue(enemyResponse.responseText);
         yield return new WaitForSeconds(0.5f);
         state = battleState.playerTurn;
@@ -68,7 +77,6 @@ public class battleManager : MonoBehaviour
     }
 
     //execute whenever player chooses something
-    //TODO: make this dynamic. Have the input be whichever move the player selected (currently its just a basic attack)
     public void OnPlayerDecision(int moveIndex) 
     {
         if (state != battleState.playerTurn) { return; }
