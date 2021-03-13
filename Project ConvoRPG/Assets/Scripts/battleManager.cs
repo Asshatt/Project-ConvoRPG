@@ -11,6 +11,7 @@ public class battleManager : MonoBehaviour
     public battleState state;
 
     [Header("Battle Variables")]
+    public int lives = 3;
     public int[] stressRange = new int[2];
     public int[] stressRangeInstinctual = new int[2];
     public float[] stimValues = new float[5];
@@ -26,7 +27,9 @@ public class battleManager : MonoBehaviour
     public TextMeshProUGUI turnIndicator;
     public GameObject baseMenu;
     public GameObject stimMenu;
+    public GameObject healthBar;
     public GameObject firstSelectedButton;
+    public GameObject stimButton;
     public float sliderSmoothing;
 
     [Header("Temporary")]
@@ -36,6 +39,7 @@ public class battleManager : MonoBehaviour
     public TextMeshProUGUI stressLevelDisplay;
 
     Button firstSelectedButtonComponent;
+    Button stimButtonComponent;
 
     response enemyResponse;
     response lastEnemyResponse;
@@ -45,6 +49,7 @@ public class battleManager : MonoBehaviour
     EnemyUnit enemyUnit;
     Slider socialStatusSlider;
     Slider stressSlider;
+    Slider healthSlider;
     //array that holds the stress values
     private float[] StressValues = new float[8];
     bool isMentalShutdown = false;
@@ -55,7 +60,9 @@ public class battleManager : MonoBehaviour
         enemyUnit = enemy.GetComponent<EnemyUnit>();
         socialStatusSlider = socialStatusBar.GetComponent<Slider>();
         stressSlider = StressBar.GetComponent<Slider>();
+        healthSlider = healthBar.GetComponent<Slider>();
         firstSelectedButtonComponent = firstSelectedButton.GetComponent<Button>();
+        stimButtonComponent = stimButton.GetComponent<Button>();
         state = battleState.start;
         StartCoroutine(setupBattle());
     }
@@ -103,6 +110,8 @@ public class battleManager : MonoBehaviour
     {
         //set it so that this registers as player's first stim
         isFirstStim = true;
+        //set stim button to interactable
+        stimButtonComponent.interactable = true;
         //Randomly assign stress values to each response
         for (int i = 0; i < 8; i++)
         {
@@ -147,8 +156,9 @@ public class battleManager : MonoBehaviour
     public void OnPlayerStim(int stimIndex) 
     {
         if (state != battleState.playerTurn) { return; }
+        
         //if its not player's first stim, and the penalty registers as true, subtract a value from social status and add stress
-        if (!isFirstStim && Random.Range(0f, 100f) <= stimProbability[stimIndex]) 
+        if (Random.Range(0f, 100f) <= stimProbability[stimIndex]) 
         {
             socialStatus -= stimSocialPenalty/100;
             stress += stimStressPenalty/100;
@@ -173,16 +183,6 @@ public class battleManager : MonoBehaviour
 
         //Add the proper amount of stress depending on the move, and the value defined in playerTurn()
         stress += StressValues[moveIndex];
-        //if stress is overflowing, reset stress and give player mental shutdown
-        if(stress <= 0) 
-        { 
-            stress = 0; 
-        }
-        else if (stress >= 1)
-        {
-            stress = 0;
-            isMentalShutdown = true;
-        }
 
         //check if the response is good, decent, bad, or very bad
         if (enemyResponse.correctResponses.Contains(moveIndex))
@@ -203,6 +203,17 @@ public class battleManager : MonoBehaviour
             socialStatus -= 0.2f;
             stress += 0.1f;
         }
+        //if stress is overflowing, reset stress and give player mental shutdown
+        if (stress <= 0.0f)
+        {
+            stress = 0;
+        }
+        else if (stress >= 1.0f)
+        {
+            stress = 0;
+            isMentalShutdown = true;
+            lives--;
+        }
 
         if (socialStatus < 0) 
         { 
@@ -212,6 +223,13 @@ public class battleManager : MonoBehaviour
         {
             state = battleState.win;
             win();
+            yield break;
+        }
+
+        if (lives <= 0)
+        {
+            state = battleState.lose;
+            lose();
             yield break;
         }
 
@@ -234,6 +252,11 @@ public class battleManager : MonoBehaviour
         {
             stressSlider.value = Mathf.Lerp(stressSlider.value, stress, sliderSmoothing * Time.deltaTime);
         }
+
+        if (healthSlider.value != lives)
+        {
+            healthSlider.value = Mathf.Lerp(healthSlider.value, lives, sliderSmoothing * Time.deltaTime);
+        }
         //updates turn indicator
         switch (state)
         {
@@ -249,6 +272,10 @@ public class battleManager : MonoBehaviour
                 turnIndicator.text = "You Win!";
                 break;
 
+            case battleState.lose:
+                turnIndicator.text = "You Lose";
+                break;
+
             default:
                 turnIndicator.text = "";
                 break;
@@ -259,6 +286,11 @@ public class battleManager : MonoBehaviour
     void win() 
     {
         
+    }
+    //void for when the player loses
+    void lose()
+    {
+
     }
 
     private void Update()
