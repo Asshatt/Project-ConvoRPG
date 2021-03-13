@@ -161,11 +161,11 @@ public class battleManager : MonoBehaviour
         if (Random.Range(0f, 100f) <= stimProbability[stimIndex]) 
         {
             socialStatus -= stimSocialPenalty/100;
-            stress += stimStressPenalty/100;
-            state = battleState.enemyTurn;
-            stimMenu.SetActive(false);
-            firstSelectedButtonComponent.Select();
-            StartCoroutine(enemyTurn());
+            if (socialStatus < 0)
+            {
+                socialStatus = 0;
+            }
+            StartCoroutine(stimRoutine());
         }
         else
         {
@@ -173,6 +173,18 @@ public class battleManager : MonoBehaviour
         }
         //subtract proper stress level from player depending on stim
         stress -= stimValues[stimIndex] / 100;
+    }
+
+    //ngl made this just to make the delay feel smoother
+    IEnumerator stimRoutine() 
+    {
+        firstSelectedButtonComponent.Select();
+        yield return new WaitForSeconds(0.01f);
+        baseMenu.SetActive(false);
+        state = 0;
+        yield return new WaitForSeconds(0.5f);
+        state = battleState.enemyTurn;
+        StartCoroutine(enemyTurn());
     }
 
     //execute when player responds

@@ -5970,16 +5970,16 @@ MonoBehaviour:
   - 5
   - 5
   - 10
-  - 30
+  - 40
   - 15
   stimProbability:
-  - 15
-  - 10
-  - 30
+  - 0
+  - 0
+  - 20
   - 40
   - 25
   stimStressPenalty: 10
-  stimSocialPenalty: 35
+  stimSocialPenalty: 25
   dialogue: {fileID: 1838777559}
   socialStatusBar: {fileID: 397352433}
   StressBar: {fileID: 1683337605}
