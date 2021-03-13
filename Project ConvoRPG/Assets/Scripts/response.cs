@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
+[System.Serializable]
 public class response// : MonoBehaviour
 {
     public string responseText;
-    public int[] correctResponses;
-    public int[] decentResponses;
-    public int[] badResponses;
-    public int[] veryBadResponses;
+    public List<int> correctResponses;
+    public List<int> decentResponses;
+    public List<int> badResponses;
+    public List<int> veryBadResponses;
 }

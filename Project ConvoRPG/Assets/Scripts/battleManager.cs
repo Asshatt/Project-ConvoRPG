@@ -76,13 +76,34 @@ public class battleManager : MonoBehaviour
     }
 
     //execute when player responds
-    //TODO: Make the action here dependent on player action
     IEnumerator playerRespond(int moveIndex) 
     {
         state = 0;
         dialogue.setOpponentDialogue("");
-        socialStatus += 0.1f;
-        if (socialStatus >= 1) 
+
+        //check if the response is good, decent, bad, or very bad
+        if (enemyResponse.correctResponses.Contains(moveIndex))
+        {
+            socialStatus += 0.1f;
+        }
+        else if (enemyResponse.decentResponses.Contains(moveIndex))
+        {
+            socialStatus += 0.05f;
+        }
+        else if (enemyResponse.badResponses.Contains(moveIndex))
+        {
+            socialStatus -= 0.1f;
+        }
+        else if (enemyResponse.veryBadResponses.Contains(moveIndex))
+        {
+            socialStatus -= 0.2f;
+        }
+
+        if (socialStatus < 0) 
+        { 
+            socialStatus = 0; 
+        }
+        else if (socialStatus >= 1)
         {
             state = battleState.win;
             win();

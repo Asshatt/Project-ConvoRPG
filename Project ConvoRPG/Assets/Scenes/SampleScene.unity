@@ -6303,6 +6303,26 @@ PrefabInstance:
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].correctResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].decentResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].badResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].veryBadResponses.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
@@ -6328,17 +6348,57 @@ PrefabInstance:
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responses.Array.data[0].responseText
-      value: Ayy Lmao
+      value: '*Joke*'
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responses.Array.data[1].responseText
-      value: Blah Blah
+      value: '*Joke that looks like an insult*'
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responses.Array.data[2].responseText
-      value: 'Placeholder Text '
+      value: '*Normal statement*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].correctResponses.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].correctResponses.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].decentResponses.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].decentResponses.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].badResponses.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].veryBadResponses.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].veryBadResponses.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responses.Array.data[0].veryBadResponses.Array.data[2]
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815c94b245decde42aa3930c8264c687, type: 3}
