@@ -2,13 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Class made to handle responses from the opponent.
+
 [Serializable]
 public class response// : MonoBehaviour
 {
+    [Header("Enemy Properties")]
     public string responseText;
-    public int[] correctResponses;
-    public int[] decentResponses;
-    public int[] badResponses;
-    public int[] veryBadResponses;
+    public List<int> correctResponses;
+    public List<int> decentResponses;
+    public List<int> badResponses;
+    public List<int> veryBadResponses;
+
+    [Header("Player Properties")]
+    public List<int> instinctualResponse;
 }
