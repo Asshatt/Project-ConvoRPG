@@ -23,7 +23,10 @@ public class battleManager : MonoBehaviour
     [Header("UI Objects")]
     public UI_opponentDialogue dialogue;
     public GameObject socialStatusBar;
+    public TextMeshProUGUI socialStatusLevelDisplay;
     public GameObject StressBar;
+    public TextMeshProUGUI stressLevelDisplay;
+    public TextMeshProUGUI[] stressMovesDisplay;
     public TextMeshProUGUI turnIndicator;
     public GameObject baseMenu;
     public GameObject stimMenu;
@@ -35,17 +38,15 @@ public class battleManager : MonoBehaviour
     [Header("Temporary")]
     //TODO: make this dynamic (make the battle manager spawn the enemy to allow for different people to spawn in from the same screen)
     public GameObject enemy;
-    //TODO: Made this not shit
-    public TextMeshProUGUI stressLevelDisplay;
-
     Button firstSelectedButtonComponent;
     Button stimButtonComponent;
 
     response enemyResponse;
     response lastEnemyResponse;
     //variables defined in code
-    float socialStatus = 0.1f;
-    float stress = 0.5f;
+    [Header("Initial Values")]
+    public float socialStatus = 0.1f;
+    public float stress = 0.5f;
     EnemyUnit enemyUnit;
     Slider socialStatusSlider;
     Slider stressSlider;
@@ -127,20 +128,11 @@ public class battleManager : MonoBehaviour
             StressValues[i] /= 100;
         }
 
-        //sets the stress level display
-        //TODO: make this not shit
-        stressLevelDisplay.text =
-            "Responses \n \n" +
-            "Friendly = " + (StressValues[0] * 100) + "% \n" +
-            "Sarcastic = " + (StressValues[1] * 100) + "% \n" +
-            "Aggressive = " + (StressValues[2] * 100) + "% \n" +
-            "Fearful = " + (StressValues[3] * 100) + "% \n" +
-            "Deadpan = " + (StressValues[4] * 100) + "% \n" +
-            "\n \n" + "React" + "\n \n" +
-            "Stay Quiet = " + (StressValues[5] * 100) + "% \n" +
-            "Laugh = " + (StressValues[6] * 100) + "% \n" +
-            "Nod = " + (StressValues[7] * 100) + "% \n"
-            ;
+        //sets value of all the textboxes to stress values
+        for(int i = 0; i < 8; i++) 
+        {
+            stressMovesDisplay[i].text = (StressValues[i] * 100).ToString("F0");
+        }
 
         baseMenu.SetActive(true);
     }
@@ -200,7 +192,7 @@ public class battleManager : MonoBehaviour
         if (enemyResponse.correctResponses.Contains(moveIndex))
         {
             socialStatus += 0.1f;
-            stress -= 0.1f;
+            //stress -= 0.1f;
         }
         else if (enemyResponse.decentResponses.Contains(moveIndex))
         {
@@ -213,7 +205,7 @@ public class battleManager : MonoBehaviour
         else if (enemyResponse.veryBadResponses.Contains(moveIndex))
         {
             socialStatus -= 0.2f;
-            stress += 0.1f;
+            //stress += 0.1f;
         }
         //if stress is overflowing, reset stress and give player mental shutdown
         if (stress <= 0.0f)
@@ -234,6 +226,7 @@ public class battleManager : MonoBehaviour
         else if (socialStatus >= 1)
         {
             state = battleState.win;
+            socialStatus = 1;
             win();
             yield break;
         }
@@ -256,12 +249,14 @@ public class battleManager : MonoBehaviour
         //updates status bars
         if (socialStatusSlider.value != socialStatus) 
         {
+            socialStatusLevelDisplay.text = (socialStatus * 100).ToString("F0") + "%";
             //Lerp function to make status bars move smooth
             socialStatusSlider.value = Mathf.Lerp(socialStatusSlider.value, socialStatus, sliderSmoothing * Time.deltaTime);
         }
 
         if (stressSlider.value != stress)
         {
+            stressLevelDisplay.text = (stress * 100).ToString("F0") + "%";
             stressSlider.value = Mathf.Lerp(stressSlider.value, stress, sliderSmoothing * Time.deltaTime);
         }
 
