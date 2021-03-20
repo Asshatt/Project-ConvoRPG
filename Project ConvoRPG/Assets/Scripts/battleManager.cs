@@ -47,14 +47,20 @@ public class battleManager : MonoBehaviour
     [Header("Initial Values")]
     public float socialStatus = 0.1f;
     public float stress = 0.5f;
+
+    //misc vars
     EnemyUnit enemyUnit;
     Slider socialStatusSlider;
     Slider stressSlider;
     Slider healthSlider;
+
     //array that holds the stress values
     private float[] StressValues = new float[8];
     bool isMentalShutdown = false;
     private bool isFirstStim = true;
+
+    //debug
+    int turnCounter = -1;
 
     void Start()
     {     
@@ -80,6 +86,7 @@ public class battleManager : MonoBehaviour
     //void which executes proper action for enemy turn
     IEnumerator enemyTurn()
     {
+        turnCounter++;
         bool loop = true;
 
         baseMenu.SetActive(false);
@@ -109,8 +116,6 @@ public class battleManager : MonoBehaviour
 
     void playerTurn()
     {
-        //set it so that this registers as player's first stim
-        isFirstStim = true;
         //set stim button to interactable
         stimButtonComponent.interactable = true;
         //Randomly assign stress values to each response
@@ -149,7 +154,7 @@ public class battleManager : MonoBehaviour
     {
         if (state != battleState.playerTurn) { return; }
         
-        //if its not player's first stim, and the penalty registers as true, subtract a value from social status and add stress
+        //if the penalty registers as true, subtract a value from social status and add stress
         if (Random.Range(0f, 100f) <= stimProbability[stimIndex]) 
         {
             socialStatus -= stimSocialPenalty/100;
@@ -191,8 +196,8 @@ public class battleManager : MonoBehaviour
         //check if the response is good, decent, bad, or very bad
         if (enemyResponse.correctResponses.Contains(moveIndex))
         {
+            //streak 
             socialStatus += 0.1f;
-            //stress -= 0.1f;
         }
         else if (enemyResponse.decentResponses.Contains(moveIndex))
         {
@@ -205,7 +210,6 @@ public class battleManager : MonoBehaviour
         else if (enemyResponse.veryBadResponses.Contains(moveIndex))
         {
             socialStatus -= 0.2f;
-            //stress += 0.1f;
         }
         //if stress is overflowing, reset stress and give player mental shutdown
         if (stress <= 0.0f)
@@ -303,5 +307,6 @@ public class battleManager : MonoBehaviour
     private void Update()
     {
         updateUI();
+        Debug.Log(turnCounter);
     }
 }
