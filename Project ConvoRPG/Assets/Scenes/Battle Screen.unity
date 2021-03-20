@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 159330374}
   - component: {fileID: 159330373}
   - component: {fileID: 159330372}
+  - component: {fileID: 159330375}
   m_Layer: 5
   m_Name: Fearful
   m_TagString: Untagged
@@ -718,6 +719,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159330370}
   m_CullTransparentMesh: 0
+--- !u!114 &159330375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159330370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Respond in a fearful manner
 --- !u!1 &186111222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1157,7 @@ GameObject:
   - component: {fileID: 348184858}
   - component: {fileID: 348184857}
   - component: {fileID: 348184856}
+  - component: {fileID: 348184859}
   m_Layer: 5
   m_Name: Stim
   m_TagString: Untagged
@@ -1282,6 +1297,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348184854}
   m_CullTransparentMesh: 0
+--- !u!114 &348184859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348184854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Relieve stress
 --- !u!1 &357348608
 GameObject:
   m_ObjectHideFlags: 0
@@ -5003,6 +5031,7 @@ GameObject:
   - component: {fileID: 1217133870}
   - component: {fileID: 1217133869}
   - component: {fileID: 1217133868}
+  - component: {fileID: 1217133871}
   m_Layer: 5
   m_Name: Sarcastic
   m_TagString: Untagged
@@ -5143,6 +5172,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217133866}
   m_CullTransparentMesh: 0
+--- !u!114 &1217133871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217133866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Respond in a sarcastic manner
 --- !u!1 &1254736470
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,6 +6770,7 @@ GameObject:
   - component: {fileID: 1541230438}
   - component: {fileID: 1541230437}
   - component: {fileID: 1541230436}
+  - component: {fileID: 1541230439}
   m_Layer: 5
   m_Name: Respond
   m_TagString: Untagged
@@ -6867,6 +6910,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541230434}
   m_CullTransparentMesh: 0
+--- !u!114 &1541230439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541230434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Respond to the statement
 --- !u!1 &1550995164
 GameObject:
   m_ObjectHideFlags: 0
@@ -6952,6 +7008,7 @@ GameObject:
   - component: {fileID: 1569423108}
   - component: {fileID: 1569423107}
   - component: {fileID: 1569423106}
+  - component: {fileID: 1569423109}
   m_Layer: 5
   m_Name: React
   m_TagString: Untagged
@@ -7091,6 +7148,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569423104}
   m_CullTransparentMesh: 0
+--- !u!114 &1569423109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569423104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: React to the statement
 --- !u!1 &1578428740
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,8 +7407,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611584
+  m_fontColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8148,6 +8218,7 @@ GameObject:
   - component: {fileID: 1710310889}
   - component: {fileID: 1710310888}
   - component: {fileID: 1710310887}
+  - component: {fileID: 1710310890}
   m_Layer: 5
   m_Name: Friendly
   m_TagString: Untagged
@@ -8288,6 +8359,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710310885}
   m_CullTransparentMesh: 0
+--- !u!114 &1710310890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710310885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Respond in a friendly manner
 --- !u!1 &1732221602
 GameObject:
   m_ObjectHideFlags: 0
@@ -8300,6 +8384,7 @@ GameObject:
   - component: {fileID: 1732221606}
   - component: {fileID: 1732221605}
   - component: {fileID: 1732221604}
+  - component: {fileID: 1732221607}
   m_Layer: 5
   m_Name: Aggressive
   m_TagString: Untagged
@@ -8440,6 +8525,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732221602}
   m_CullTransparentMesh: 0
+--- !u!114 &1732221607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732221602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Respond in an aggressive manner
 --- !u!1 &1760979548
 GameObject:
   m_ObjectHideFlags: 0
@@ -10573,6 +10671,7 @@ GameObject:
   - component: {fileID: 2143270841}
   - component: {fileID: 2143270840}
   - component: {fileID: 2143270839}
+  - component: {fileID: 2143270842}
   m_Layer: 5
   m_Name: Deadpan
   m_TagString: Untagged
@@ -10713,6 +10812,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143270837}
   m_CullTransparentMesh: 0
+--- !u!114 &2143270842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143270837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777de42bc982e134abfa02133b7e30bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: Respond in a deadpan/neutral manner
 --- !u!1001 &1742884873810526747
 PrefabInstance:
   m_ObjectHideFlags: 0

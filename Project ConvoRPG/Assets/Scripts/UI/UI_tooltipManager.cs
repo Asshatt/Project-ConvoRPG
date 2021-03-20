@@ -14,13 +14,10 @@ public class UI_tooltipManager : MonoBehaviour
     void Update()
     {
         tooltipText.text = "";
-        if (eventSystem.currentSelectedGameObject.GetComponent<UI_tooltip>() != null)
+        if (eventSystem.currentSelectedGameObject.GetComponent<UI_tooltip>() != null && eventSystem.currentSelectedGameObject.activeInHierarchy)
         {
             string tooltip = eventSystem.currentSelectedGameObject.GetComponent<UI_tooltip>().tooltip;
-            if (tooltip != null)
-            {
-                tooltipText.text = tooltip;
-            }
+            tooltipText.text = tooltip;
         }
     }
 }

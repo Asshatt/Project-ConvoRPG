@@ -108,6 +108,7 @@ public class battleManager : MonoBehaviour
         if (turnLimit < 0) 
         {
             state = battleState.lose;
+            dialogue.setOpponentDialogue("I've lost my patience with you.");
             lose();
             yield break;
         }
