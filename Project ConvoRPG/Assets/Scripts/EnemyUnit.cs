@@ -16,4 +16,6 @@ public class EnemyUnit : MonoBehaviour
         chosenResponse = responses[UnityEngine.Random.Range(0, responses.Length)];
         return chosenResponse;
     }
+
+    public int turnLimit;
 }

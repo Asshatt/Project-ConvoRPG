@@ -34,6 +34,11 @@ public class battleManager : MonoBehaviour
     public GameObject firstSelectedButton;
     public GameObject stimButton;
     public float sliderSmoothing;
+    public GameObject patienceIndicator;
+    public float patienceColorSmoothing;
+
+    [Header("Misc")]
+    public Color[] patienceColors;
 
     [Header("Temporary")]
     //TODO: make this dynamic (make the battle manager spawn the enemy to allow for different people to spawn in from the same screen)
@@ -41,8 +46,12 @@ public class battleManager : MonoBehaviour
     Button firstSelectedButtonComponent;
     Button stimButtonComponent;
 
+    //enemy variables
     response enemyResponse;
     response lastEnemyResponse;
+    int turnLimit;
+    int turnLimitMax;
+
     //variables defined in code
     [Header("Initial Values")]
     public float socialStatus = 0.1f;
@@ -53,6 +62,7 @@ public class battleManager : MonoBehaviour
     Slider socialStatusSlider;
     Slider stressSlider;
     Slider healthSlider;
+    RawImage patienceImage;
 
     //array that holds the stress values
     private float[] StressValues = new float[8];
@@ -63,13 +73,19 @@ public class battleManager : MonoBehaviour
     int turnCounter = -1;
 
     void Start()
-    {     
+    {
+        //parse components from gameobjects
         enemyUnit = enemy.GetComponent<EnemyUnit>();
         socialStatusSlider = socialStatusBar.GetComponent<Slider>();
         stressSlider = StressBar.GetComponent<Slider>();
         healthSlider = healthBar.GetComponent<Slider>();
         firstSelectedButtonComponent = firstSelectedButton.GetComponent<Button>();
         stimButtonComponent = stimButton.GetComponent<Button>();
+        patienceImage = patienceIndicator.GetComponent<RawImage>();
+        
+        turnLimit = enemyUnit.turnLimit;
+        turnLimitMax = turnLimit - 1;
+
         state = battleState.start;
         StartCoroutine(setupBattle());
     }
@@ -86,7 +102,15 @@ public class battleManager : MonoBehaviour
     //void which executes proper action for enemy turn
     IEnumerator enemyTurn()
     {
-        turnCounter++;
+       //increment turnlimit down
+        turnLimit--;
+        //checks if enemy turn limit is depleted
+        if (turnLimit < 0) 
+        {
+            state = battleState.lose;
+            lose();
+            yield break;
+        }
         bool loop = true;
 
         baseMenu.SetActive(false);
@@ -291,6 +315,20 @@ public class battleManager : MonoBehaviour
                 turnIndicator.text = "";
                 break;
         }
+
+        float turnPercent = (float)turnLimit / (float)turnLimitMax;
+        if (turnPercent <= 1f/3f)
+        {
+            patienceImage.color = Color.Lerp(patienceImage.color, patienceColors[2], patienceColorSmoothing * Time.deltaTime);
+        }
+        else if (turnPercent <= 2f/3f)
+        {
+            patienceImage.color = Color.Lerp(patienceImage.color, patienceColors[1], patienceColorSmoothing * Time.deltaTime);
+        }
+        else
+        {
+            patienceImage.color = Color.Lerp(patienceImage.color, patienceColors[0], patienceColorSmoothing * Time.deltaTime);
+        }
         return;
     }
     //void for when the player wins
@@ -306,7 +344,7 @@ public class battleManager : MonoBehaviour
 
     private void Update()
     {
+        //TODO make this more efficient/performant
         updateUI();
-        Debug.Log(turnCounter);
     }
 }
