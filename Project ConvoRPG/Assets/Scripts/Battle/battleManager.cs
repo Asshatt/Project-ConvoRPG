@@ -18,6 +18,7 @@ public class battleManager : MonoBehaviour
     public float[] stimProbability = new float[5];
     public float stimStressPenalty;
     public float stimSocialPenalty;
+    public float streakAddition;
 
     //game objects to be defined in the inspector
     [Header("UI Objects")]
@@ -27,7 +28,7 @@ public class battleManager : MonoBehaviour
     public GameObject StressBar;
     public TextMeshProUGUI stressLevelDisplay;
     public TextMeshProUGUI[] stressMovesDisplay;
-    public TextMeshProUGUI turnIndicator;
+    public GameObject turnIndicatorObject;
     public GameObject baseMenu;
     public GameObject stimMenu;
     public GameObject healthBar;
@@ -62,12 +63,12 @@ public class battleManager : MonoBehaviour
     Slider socialStatusSlider;
     Slider stressSlider;
     Slider healthSlider;
+    TextMeshProUGUI turnIndicator;
     RawImage patienceImage;
-
+    int streak = 0;
     //array that holds the stress values
     private float[] StressValues = new float[8];
     bool isMentalShutdown = false;
-    private bool isFirstStim = true;
 
     //debug
     int turnCounter = -1;
@@ -82,7 +83,8 @@ public class battleManager : MonoBehaviour
         firstSelectedButtonComponent = firstSelectedButton.GetComponent<Button>();
         stimButtonComponent = stimButton.GetComponent<Button>();
         patienceImage = patienceIndicator.GetComponent<RawImage>();
-        
+        turnIndicator = turnIndicatorObject.GetComponent<TextMeshProUGUI>();
+
         turnLimit = enemyUnit.turnLimit;
         turnLimitMax = turnLimit - 1;
 
@@ -94,6 +96,7 @@ public class battleManager : MonoBehaviour
     IEnumerator setupBattle() 
     {
         dialogue.setOpponentDialogue("");
+        turnIndicatorObject.SetActive(false);
         yield return new WaitForSeconds(2f);
         state = battleState.enemyTurn;
         StartCoroutine(enemyTurn());
@@ -102,7 +105,9 @@ public class battleManager : MonoBehaviour
     //void which executes proper action for enemy turn
     IEnumerator enemyTurn()
     {
-       //increment turnlimit down
+        turnCounter++;
+        turnIndicatorObject.SetActive(true);
+        //increment turnlimit down
         turnLimit--;
         //checks if enemy turn limit is depleted
         if (turnLimit < 0) 
@@ -135,12 +140,14 @@ public class battleManager : MonoBehaviour
             dialogue.setOpponentDialogue(enemyResponse.responseText);
         }
         yield return new WaitForSeconds(0.5f);
+        turnIndicatorObject.SetActive(false);
         state = battleState.playerTurn;
         playerTurn();
     }
 
     void playerTurn()
     {
+        turnIndicatorObject.SetActive(true);
         //set stim button to interactable
         stimButtonComponent.interactable = true;
         //Randomly assign stress values to each response
@@ -177,30 +184,37 @@ public class battleManager : MonoBehaviour
     //execute whenever player chooses a stim
     public void OnPlayerStim(int stimIndex) 
     {
-        if (state != battleState.playerTurn) { return; }
-        
+        StartCoroutine(stimMethod(stimIndex));
+    }
+
+    IEnumerator stimMethod(int stimIndex) 
+    {
+        if (state != battleState.playerTurn) { yield break; }
+        //subtract proper stress level from player depending on stim
+        stress -= stimValues[stimIndex] / 100;
+        yield return new WaitForSeconds(1);
         //if the penalty registers as true, subtract a value from social status and add stress
-        if (Random.Range(0f, 100f) <= stimProbability[stimIndex]) 
+        if (Random.Range(0f, 100f) <= stimProbability[stimIndex])
         {
-            socialStatus -= stimSocialPenalty/100;
+            socialStatus -= stimSocialPenalty / 100;
             if (socialStatus < 0)
             {
                 socialStatus = 0;
             }
-            StartCoroutine(stimRoutine());
+            turnIndicatorObject.SetActive(false);
+            StartCoroutine(stimFail());
+            yield break;
         }
-        else
-        {
-            isFirstStim = false;
-        }
-        //subtract proper stress level from player depending on stim
-        stress -= stimValues[stimIndex] / 100;
+        baseMenu.SetActive(true);
+        yield break;
     }
 
     //ngl made this just to make the delay feel smoother
-    IEnumerator stimRoutine() 
+    IEnumerator stimFail() 
     {
+        streak = 0;
         firstSelectedButtonComponent.Select();
+        dialogue.setOpponentDialogue("?!");
         yield return new WaitForSeconds(0.01f);
         baseMenu.SetActive(false);
         state = 0;
@@ -212,6 +226,7 @@ public class battleManager : MonoBehaviour
     //execute when player responds
     IEnumerator playerRespond(int moveIndex) 
     {
+        turnIndicatorObject.SetActive(false);
         state = 0;
         dialogue.setOpponentDialogue("");
 
@@ -222,19 +237,23 @@ public class battleManager : MonoBehaviour
         if (enemyResponse.correctResponses.Contains(moveIndex))
         {
             //streak 
-            socialStatus += 0.1f;
+            socialStatus += 0.1f + (streak * streakAddition)/100;
+            streak++;
         }
         else if (enemyResponse.decentResponses.Contains(moveIndex))
         {
-            socialStatus += 0.05f;
+            socialStatus += 0.05f + (streak * streakAddition)/100;
+            streak++;
         }
         else if (enemyResponse.badResponses.Contains(moveIndex))
         {
             socialStatus -= 0.1f;
+            streak = 0;
         }
         else if (enemyResponse.veryBadResponses.Contains(moveIndex))
         {
             socialStatus -= 0.2f;
+            streak = 0;
         }
         //if stress is overflowing, reset stress and give player mental shutdown
         if (stress <= 0.0f)
@@ -335,17 +354,18 @@ public class battleManager : MonoBehaviour
     //void for when the player wins
     void win() 
     {
-        
+        turnIndicatorObject.SetActive(true);
     }
     //void for when the player loses
     void lose()
     {
-
+        turnIndicatorObject.SetActive(true);
     }
 
     private void Update()
     {
         //TODO make this more efficient/performant
         updateUI();
+        Debug.Log(turnCounter);
     }
 }
