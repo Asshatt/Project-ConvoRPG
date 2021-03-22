@@ -13,6 +13,16 @@ public class response// : MonoBehaviour
     public List<int> badResponses;
     public List<int> veryBadResponses;
 
+    [Space(10)]
+
     [Header("Player Properties")]
     public List<int> instinctualResponse;
+
+    [Space(10)]
+
+    [Header("Response Variables")]
+    public bool repeatable = true;
+
+    [HideInInspector]
+    public bool hasBeenRepeated = false;
 }

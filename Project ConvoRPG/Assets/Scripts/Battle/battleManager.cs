@@ -125,7 +125,7 @@ public class battleManager : MonoBehaviour
         //this while loop prevents the enemy from choosing the same response twice in a row
         while (loop)
         {
-            enemyResponse = enemyUnit.chooseResponse(enemyUnit.responses);
+            enemyResponse = enemyUnit.chooseResponse(enemyUnit.responseCategories);
             if(enemyResponse != lastEnemyResponse){ loop = false; }
         }
         lastEnemyResponse = enemyResponse;
@@ -262,6 +262,8 @@ public class battleManager : MonoBehaviour
         }
         else if (stress >= 1.0f)
         {
+            stress = 1;
+            yield return new WaitForSeconds(0.7f);
             stress = 0;
             isMentalShutdown = true;
             lives--;
@@ -273,10 +275,24 @@ public class battleManager : MonoBehaviour
         }
         else if (socialStatus >= 1)
         {
-            state = battleState.win;
-            socialStatus = 1;
-            win();
-            yield break;
+            if (enemyUnit.hasMultiplePhases && !enemyUnit.isFinalPhase)
+            {
+                socialStatus = 1;
+                yield return new WaitForSeconds(0.7f);
+                socialStatus = 0;
+                enemyUnit.currentPhase++;
+                if(enemyUnit.currentPhase >= enemyUnit.responseCategories.Length - 1)
+                {
+                    enemyUnit.isFinalPhase = true;
+                }
+            }
+            else
+            {
+                state = battleState.win;
+                socialStatus = 1;
+                win();
+                yield break;
+            }
         }
 
         if (lives <= 0)
@@ -366,6 +382,6 @@ public class battleManager : MonoBehaviour
     {
         //TODO make this more efficient/performant
         updateUI();
-        Debug.Log(turnCounter);
+        Debug.Log(enemyUnit.isFinalPhase);
     }
 }
