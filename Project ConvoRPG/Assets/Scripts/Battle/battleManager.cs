@@ -20,6 +20,10 @@ public class battleManager : MonoBehaviour
     public float stimSocialPenalty;
     public float streakAddition;
 
+    [Header("Character Animation Variables")]
+    public GameObject mainCharacterSprite;
+    mainCharacterAnimationController mainCharAnim;
+
     //game objects to be defined in the inspector
     [Header("UI Objects")]
     public UI_opponentDialogue dialogue;
@@ -72,7 +76,6 @@ public class battleManager : MonoBehaviour
 
     //debug
     int turnCounter = -1;
-
     void Start()
     {
         //parse components from gameobjects
@@ -84,6 +87,8 @@ public class battleManager : MonoBehaviour
         stimButtonComponent = stimButton.GetComponent<Button>();
         patienceImage = patienceIndicator.GetComponent<RawImage>();
         turnIndicator = turnIndicatorObject.GetComponent<TextMeshProUGUI>();
+
+        mainCharAnim = mainCharacterSprite.GetComponent<mainCharacterAnimationController>();
 
         turnLimit = enemyUnit.turnLimit;
         turnLimitMax = turnLimit - 1;
@@ -192,7 +197,9 @@ public class battleManager : MonoBehaviour
         if (state != battleState.playerTurn) { yield break; }
         //subtract proper stress level from player depending on stim
         stress -= stimValues[stimIndex] / 100;
-        yield return new WaitForSeconds(1);
+        mainCharAnim.animateStim(stimIndex);
+        Debug.Log(mainCharAnim.currentAnimLength);
+        yield return new WaitForSeconds(mainCharAnim.currentAnimLength);
         //if the penalty registers as true, subtract a value from social status and add stress
         if (Random.Range(0f, 100f) <= stimProbability[stimIndex])
         {
@@ -231,8 +238,9 @@ public class battleManager : MonoBehaviour
         dialogue.setOpponentDialogue("");
 
         //Add the proper amount of stress depending on the move, and the value defined in playerTurn()
+        mainCharAnim.animateResponse(moveIndex);
+        yield return new WaitForSeconds(mainCharAnim.currentAnimLength + 0.15f);
         stress += StressValues[moveIndex];
-
         //check if the response is good, decent, bad, or very bad
         if (enemyResponse.correctResponses.Contains(moveIndex))
         {
@@ -264,6 +272,7 @@ public class battleManager : MonoBehaviour
         {
             stress = 1;
             yield return new WaitForSeconds(0.7f);
+            mainCharAnim.playDamageAnimation();
             stress = 0;
             isMentalShutdown = true;
             lives--;
@@ -382,6 +391,6 @@ public class battleManager : MonoBehaviour
     {
         //TODO make this more efficient/performant
         updateUI();
-        Debug.Log(enemyUnit.isFinalPhase);
+        //Debug.Log(enemyUnit.isFinalPhase);
     }
 }

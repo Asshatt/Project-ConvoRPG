@@ -262,7 +262,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2660,7 +2660,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2816,7 +2816,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3100,7 +3100,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -3121,6 +3121,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &783025623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 230837409133902670, guid: a6310de18267d094c83e00d58c66de7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 230837409512701593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &824727769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3495,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3735,7 +3741,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3819,7 +3825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &877893881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3990,7 +3996,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4518,7 +4524,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5210,7 +5216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.69803923}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8509804}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5233,31 +5239,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151103380}
   m_CullTransparentMesh: 0
---- !u!1 &1173816067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3004864077141301193, guid: 5944687fa014509419269e7cf2b19206,
-    type: 3}
-  m_PrefabInstance: {fileID: 3004864076447404574}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1173816070
+--- !u!95 &1173816070 stripped
 Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 230837410657156511, guid: a6310de18267d094c83e00d58c66de7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 230837409512701593}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173816067}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e100e4f0e36324d41996f91cd58771d9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1195842431
 GameObject:
   m_ObjectHideFlags: 0
@@ -6015,7 +6002,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6764,7 +6751,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7855,6 +7842,7 @@ MonoBehaviour:
   stimStressPenalty: 10
   stimSocialPenalty: 25
   streakAddition: 3
+  mainCharacterSprite: {fileID: 783025623}
   dialogue: {fileID: 1838777559}
   socialStatusBar: {fileID: 397352433}
   socialStatusLevelDisplay: {fileID: 1254736472}
@@ -8145,7 +8133,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8697,7 +8685,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9265,7 +9253,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9421,7 +9409,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9733,7 +9721,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10442,7 +10430,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10814,7 +10802,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11126,7 +11114,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11282,7 +11270,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11627,131 +11615,350 @@ MonoBehaviour:
             m_StringArgument: UI_Select
             m_BoolArgument: 0
           m_CallState: 2
---- !u!1001 &3004864076447404574
+--- !u!1001 &230837409512701593
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3004864077141301190, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301190, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301190, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.665
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301190, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301191, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301191, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301191, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301191, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5115618752126089108, guid: 7b77e4c83de0694498ce0b22c0097d0a,
-        type: 3}
-    - target: {fileID: 3004864077141301191, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301191, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864077141301193, guid: 5944687fa014509419269e7cf2b19206,
-        type: 3}
-      propertyPath: m_Name
-      value: sprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.25
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584966, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445313, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3004864078116584969, guid: 5944687fa014509419269e7cf2b19206,
+    - target: {fileID: 230837410108445326, guid: a6310de18267d094c83e00d58c66de7f,
         type: 3}
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: idleAnimation
+      value: idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[0].name
+      value: Look Around
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[0].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[1].name
+      value: Scratch Fingers
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[1].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[2].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[3].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[4].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[2].name
+      value: Kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[3].name
+      value: Mumble
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[4].name
+      value: Crack Knuckles
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[0].animationClipName
+      value: lookAround
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[1].animationClipName
+      value: scratchFingers
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[2].animationClipName
+      value: kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[3].animationClipName
+      value: lookAround
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[4].animationClipName
+      value: scratchFingers
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: damageAnimation.name
+      value: Damage Animation
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: damageAnimation.animationClipName
+      value: damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[0].name
+      value: Friendly Response
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[1].name
+      value: Sarcastic Response
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[2].name
+      value: Aggressive Response
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[3].name
+      value: Fearful Response
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[3].animationClipName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[4].name
+      value: Deadpan Response
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[5].name
+      value: Stay Quiet
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[5].animationClipName
+      value: scratchFingers
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[5].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[6].name
+      value: Laugh
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[7].name
+      value: Nod
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[7].animationClipName
+      value: nod
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[7].length
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[0].animationClipName
+      value: nod
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[0].length
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[2].animationClipName
+      value: aggressive
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[2].length
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[1].animationClipName
+      value: sarcastic
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[1].length
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[4].animationClipName
+      value: idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 281633029341899631, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: responseAnimations.Array.data[4].length
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1173816070}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[0]
+      value: lookAround
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[1]
+      value: scratchFingers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[2]
+      value: kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[4]
+      value: scratchFingers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[3]
+      value: lookAround
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: idleAnimation
+      value: idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[4].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[3].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[2].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[1].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[0].length
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219170105555041553, guid: a6310de18267d094c83e00d58c66de7f,
+        type: 3}
+      propertyPath: stimAnimations.Array.data[0].name
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5944687fa014509419269e7cf2b19206, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a6310de18267d094c83e00d58c66de7f, type: 3}
 --- !u!1001 &3758153902938884039
 PrefabInstance:
   m_ObjectHideFlags: 0

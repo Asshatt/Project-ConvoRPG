@@ -1,0 +1,1129 @@
+fileFormatVersion: 2
+guid: cfc3cef4988cc0145ba49fca54b850ae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 715254426631423543
+    second: player_lookAround_0
+  - first:
+      213: -3852116017163213742
+    second: player_lookAround_1
+  - first:
+      213: -7175998148285103277
+    second: player_lookAround_2
+  - first:
+      213: -7057274185842271791
+    second: player_lookAround_3
+  - first:
+      213: -1364359400896920775
+    second: player_lookAround_4
+  - first:
+      213: 5933967939738405309
+    second: player_lookAround_5
+  - first:
+      213: 238569703198649094
+    second: player_lookAround_6
+  - first:
+      213: 8463532482212272152
+    second: player_lookAround_7
+  - first:
+      213: -7267404508475391538
+    second: player_lookAround_8
+  - first:
+      213: -5468030493285632015
+    second: player_lookAround_9
+  - first:
+      213: -8917281519833488537
+    second: player_lookAround_10
+  - first:
+      213: 1753829924038493386
+    second: player_lookAround_11
+  - first:
+      213: 5529336927989938056
+    second: player_lookAround_12
+  - first:
+      213: 1028586994538148462
+    second: player_lookAround_13
+  - first:
+      213: 8325654954105560586
+    second: player_lookAround_14
+  - first:
+      213: -2943275771187665341
+    second: player_lookAround_15
+  - first:
+      213: 2783037216107868858
+    second: player_lookAround_16
+  - first:
+      213: 3037083750754261055
+    second: player_lookAround_17
+  - first:
+      213: 3545981024626583887
+    second: player_lookAround_18
+  - first:
+      213: -6626904112062108924
+    second: player_lookAround_19
+  - first:
+      213: -8270904737031454883
+    second: player_lookAround_20
+  - first:
+      213: -2563771573367744085
+    second: player_lookAround_21
+  - first:
+      213: -1911579702398302409
+    second: player_lookAround_22
+  - first:
+      213: -2514947797959459743
+    second: player_lookAround_23
+  - first:
+      213: 3237330452614784806
+    second: player_lookAround_24
+  - first:
+      213: 1766574818938838239
+    second: player_lookAround_25
+  - first:
+      213: 8490072147800057030
+    second: player_lookAround_26
+  - first:
+      213: -5400244909430241020
+    second: player_lookAround_27
+  - first:
+      213: -7558098625738945937
+    second: player_lookAround_28
+  - first:
+      213: -498006762761971563
+    second: player_lookAround_29
+  - first:
+      213: -5314687692372620639
+    second: player_lookAround_30
+  - first:
+      213: 1387628007182373164
+    second: player_lookAround_31
+  - first:
+      213: -8464739923762758747
+    second: player_lookAround_32
+  - first:
+      213: 4687092664774657166
+    second: player_lookAround_33
+  - first:
+      213: -7941585218111189748
+    second: player_lookAround_34
+  - first:
+      213: 1937752780381136392
+    second: player_lookAround_35
+  - first:
+      213: -233748599186750471
+    second: player_lookAround_36
+  - first:
+      213: 8272028730445747830
+    second: player_lookAround_37
+  - first:
+      213: -5039423090643153048
+    second: player_lookAround_38
+  - first:
+      213: -5935606511097634902
+    second: player_lookAround_39
+  - first:
+      213: 3280170297268364252
+    second: player_lookAround_40
+  - first:
+      213: 5477415058629173373
+    second: player_lookAround_41
+  - first:
+      213: -2356305284865879566
+    second: player_lookAround_42
+  - first:
+      213: 5001816064337034898
+    second: player_lookAround_43
+  - first:
+      213: -462561476729498043
+    second: player_lookAround_44
+  - first:
+      213: -6926551235784359677
+    second: player_lookAround_45
+  - first:
+      213: 378430772248927511
+    second: player_lookAround_46
+  - first:
+      213: -1842614969824637570
+    second: player_lookAround_47
+  - first:
+      213: -6644435643258940755
+    second: player_lookAround_48
+  - first:
+      213: 6469838936205321966
+    second: player_lookAround_49
+  - first:
+      213: -5175786224372275454
+    second: player_lookAround_50
+  - first:
+      213: -1834440144675146862
+    second: player_lookAround_51
+  - first:
+      213: 7252929275353525002
+    second: player_lookAround_52
+  - first:
+      213: -3422121852341598390
+    second: player_lookAround_53
+  - first:
+      213: 654793642992627863
+    second: player_lookAround_54
+  - first:
+      213: -7234648435088911759
+    second: player_lookAround_55
+  - first:
+      213: -4657144122926314722
+    second: player_lookAround_56
+  - first:
+      213: -8940845364136078904
+    second: player_lookAround_57
+  - first:
+      213: 5064750172677043463
+    second: player_lookAround_58
+  - first:
+      213: -2807102092207323867
+    second: player_lookAround_59
+  - first:
+      213: 1567221066064927791
+    second: player_lookAround_60
+  - first:
+      213: 6288128559428289877
+    second: player_lookAround_61
+  - first:
+      213: 6616548825185070678
+    second: player_lookAround_62
+  - first:
+      213: -2298116834584939683
+    second: player_lookAround_63
+  - first:
+      213: 4150649205460430989
+    second: player_lookAround_64
+  - first:
+      213: -1388606815317745379
+    second: player_lookAround_65
+  - first:
+      213: -2881476230139982439
+    second: player_lookAround_66
+  - first:
+      213: -1197242442083043498
+    second: player_lookAround_67
+  - first:
+      213: 5681726766503678147
+    second: player_lookAround_68
+  - first:
+      213: -4668400095807943627
+    second: player_lookAround_69
+  - first:
+      213: 4491184818822203266
+    second: player_lookAround_70
+  - first:
+      213: -7375760661766568378
+    second: player_lookAround_71
+  - first:
+      213: -998106779234385585
+    second: player_lookAround_72
+  - first:
+      213: -2589212125511065451
+    second: player_lookAround_73
+  - first:
+      213: 3307571146559606852
+    second: player_lookAround_74
+  - first:
+      213: -4986728853778025762
+    second: player_lookAround_75
+  - first:
+      213: 5701421342100954760
+    second: player_lookAround_76
+  - first:
+      213: 2503191621840598954
+    second: player_lookAround_77
+  - first:
+      213: 6158752673014075303
+    second: player_lookAround_78
+  - first:
+      213: 1098535332777314238
+    second: player_lookAround_79
+  - first:
+      213: 7392514075217851684
+    second: player_lookAround_80
+  - first:
+      213: -1892921108807081027
+    second: player_lookAround_81
+  - first:
+      213: 5778249099032059515
+    second: player_lookAround_82
+  - first:
+      213: -2636635905055266377
+    second: player_lookAround_83
+  - first:
+      213: 8784207023180612816
+    second: player_lookAround_84
+  - first:
+      213: 6593206133335075889
+    second: player_lookAround_85
+  - first:
+      213: -527649708505070621
+    second: player_lookAround_86
+  - first:
+      213: 6023898040238402247
+    second: player_lookAround_87
+  - first:
+      213: -8147994491687339262
+    second: player_lookAround_88
+  - first:
+      213: -8585351683662499791
+    second: player_lookAround_89
+  - first:
+      213: -969793583425347121
+    second: player_lookAround_90
+  - first:
+      213: 3157738793229718179
+    second: player_lookAround_91
+  - first:
+      213: 319282094848419168
+    second: player_lookAround_92
+  - first:
+      213: -135950119218767738
+    second: player_lookAround_93
+  - first:
+      213: 1316027694117908846
+    second: player_lookAround_94
+  - first:
+      213: -762202239196103901
+    second: player_lookAround_95
+  - first:
+      213: -2746848595821462581
+    second: player_lookAround_96
+  - first:
+      213: 3383820088161518513
+    second: player_lookAround_97
+  - first:
+      213: 630546462429798956
+    second: player_lookAround_98
+  - first:
+      213: -5935148500855570432
+    second: player_lookAround_99
+  - first:
+      213: -7147355836885952522
+    second: player_lookAround_100
+  - first:
+      213: 4290297616142435565
+    second: player_lookAround_101
+  - first:
+      213: -8977376130877593274
+    second: player_lookAround_102
+  - first:
+      213: -1044358894978478098
+    second: player_lookAround_103
+  - first:
+      213: 6503149737727058338
+    second: player_lookAround_104
+  - first:
+      213: -4308332312454782588
+    second: player_lookAround_105
+  - first:
+      213: -2819666872543792495
+    second: player_lookAround_106
+  - first:
+      213: 1211363192692335758
+    second: player_lookAround_107
+  - first:
+      213: -7812867226039105555
+    second: player_lookAround_108
+  - first:
+      213: 8509761048103114977
+    second: player_lookAround_109
+  - first:
+      213: 3534253311009238571
+    second: player_lookAround_110
+  - first:
+      213: -3935362939803391822
+    second: player_lookAround_111
+  - first:
+      213: 972470018221397461
+    second: player_lookAround_112
+  - first:
+      213: -3735421743473991637
+    second: player_lookAround_113
+  - first:
+      213: -6673679518221294263
+    second: player_lookAround_114
+  - first:
+      213: -4506571054123758303
+    second: player_lookAround_115
+  - first:
+      213: -2637077244360452183
+    second: player_lookAround_116
+  - first:
+      213: 5875280886656936550
+    second: player_lookAround_117
+  - first:
+      213: 6269808229386403558
+    second: player_lookAround_118
+  - first:
+      213: 2235735379092239634
+    second: player_lookAround_119
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_lookAround_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73644678c181de900800000000000000
+      internalID: 715254426631423543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254e46b44e88a8ac0800000000000000
+      internalID: -3852116017163213742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3530b9644bbb96c90800000000000000
+      internalID: -7175998148285103277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9565ed4868f0e90800000000000000
+      internalID: -7057274185842271791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93303938a52d01de0800000000000000
+      internalID: -1364359400896920775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db90aa4d660b95250800000000000000
+      internalID: 5933967939738405309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b635d81e19f4300800000000000000
+      internalID: 238569703198649094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8181e3b63f1847570800000000000000
+      internalID: 8463532482212272152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec180499a1ef42b90800000000000000
+      internalID: -7267404508475391538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7b4babc37ad14b0800000000000000
+      internalID: -5468030493285632015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7636b2814b37f3480800000000000000
+      internalID: -8917281519833488537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4c3c2160bd65810800000000000000
+      internalID: 1753829924038493386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8873a4ce3a62cbc40800000000000000
+      internalID: 5529336927989938056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62780efb66464e00800000000000000
+      internalID: 1028586994538148462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0edeedc11baa8370800000000000000
+      internalID: 8325654954105560586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346685eb7426727d0800000000000000
+      internalID: -2943275771187665341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab23dc65a955f9620800000000000000
+      internalID: 2783037216107868858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_17
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3891d48493e52a20800000000000000
+      internalID: 3037083750754261055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_18
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49a42954fad53130800000000000000
+      internalID: 3545981024626583887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_19
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b66f722d18804a0800000000000000
+      internalID: -6626904112062108924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_20
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ff42a76f7d73d80800000000000000
+      internalID: -8270904737031454883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_21
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9db246657ab6cd0800000000000000
+      internalID: -2563771573367744085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_22
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737c3be7364b875e0800000000000000
+      internalID: -1911579702398302409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_23
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cb9f17d4c191dd0800000000000000
+      internalID: -2514947797959459743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_24
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627a8a005ee4dec20800000000000000
+      internalID: 3237330452614784806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_25
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcdff72072248810800000000000000
+      internalID: 1766574818938838239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_26
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c46f07d2abc2d570800000000000000
+      internalID: 8490072147800057030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_27
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4098c49ddd97e05b0800000000000000
+      internalID: -5400244909430241020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_28
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a467b285d3c1790800000000000000
+      internalID: -7558098625738945937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_lookAround_29
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59894d1ec79b619f0800000000000000
+      internalID: -498006762761971563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
