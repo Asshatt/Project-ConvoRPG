@@ -8,6 +8,7 @@ public enum battleState {start, playerTurn, enemyTurn, win, lose}
 
 public class battleManager : MonoBehaviour
 {
+    gameManager manager;
     public battleState state;
 
     [Header("Battle Variables")]
@@ -19,6 +20,9 @@ public class battleManager : MonoBehaviour
     public float stimStressPenalty;
     public float stimSocialPenalty;
     public float streakAddition;
+
+    [Header("Transforms")]
+    public GameObject enemyTransform;
 
     [Header("Character Animation Variables")]
     public GameObject mainCharacterSprite;
@@ -32,7 +36,6 @@ public class battleManager : MonoBehaviour
     public GameObject StressBar;
     public TextMeshProUGUI stressLevelDisplay;
     public TextMeshProUGUI[] stressMovesDisplay;
-    public GameObject turnIndicatorObject;
     public GameObject baseMenu;
     public GameObject stimMenu;
     public GameObject healthBar;
@@ -41,6 +44,15 @@ public class battleManager : MonoBehaviour
     public float sliderSmoothing;
     public GameObject patienceIndicator;
     public float patienceColorSmoothing;
+
+    [Header("UI Text Indicators")]
+    public GameObject playerTurnIndicator;
+    public GameObject enemyTurnIndicator;
+    public GameObject winIndicator;
+    public GameObject loseIndicator;
+
+    [Header("UI Particle Systems")]
+    [Tooltip("Element 0 is the prefab for the particle, Element 1 is the transform where it will be instantiated")]
 
     [Header("Misc")]
     public Color[] patienceColors;
@@ -76,8 +88,14 @@ public class battleManager : MonoBehaviour
 
     //debug
     int turnCounter = -1;
-    void Start()
+    void Awake()
     {
+        manager = GameObject.Find("gameManagerObject").GetComponent<gameManager>();
+        //spawn in enemy that is stated by gameManager
+        enemy = GameObject.Instantiate(manager.enemyPrefab, enemyTransform.transform);
+        //
+        stress = manager.stress;
+        lives = manager.lives;
         //parse components from gameobjects
         enemyUnit = enemy.GetComponent<EnemyUnit>();
         socialStatusSlider = socialStatusBar.GetComponent<Slider>();
@@ -86,7 +104,9 @@ public class battleManager : MonoBehaviour
         firstSelectedButtonComponent = firstSelectedButton.GetComponent<Button>();
         stimButtonComponent = stimButton.GetComponent<Button>();
         patienceImage = patienceIndicator.GetComponent<RawImage>();
-        turnIndicator = turnIndicatorObject.GetComponent<TextMeshProUGUI>();
+        //turnIndicator = turnIndicatorObject.GetComponent<TextMeshProUGUI>();
+
+        enemyTurnIndicator.GetComponent<TextMeshProUGUI>().text = enemyUnit.name + "'s Turn";
 
         mainCharAnim = mainCharacterSprite.GetComponent<mainCharacterAnimationController>();
 
@@ -101,7 +121,7 @@ public class battleManager : MonoBehaviour
     IEnumerator setupBattle() 
     {
         dialogue.setOpponentDialogue("");
-        turnIndicatorObject.SetActive(false);
+        //turnIndicatorObject.SetActive(false);
         yield return new WaitForSeconds(2f);
         state = battleState.enemyTurn;
         StartCoroutine(enemyTurn());
@@ -110,8 +130,9 @@ public class battleManager : MonoBehaviour
     //void which executes proper action for enemy turn
     IEnumerator enemyTurn()
     {
+        enemyTurnIndicator.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
         turnCounter++;
-        turnIndicatorObject.SetActive(true);
         //increment turnlimit down
         turnLimit--;
         //checks if enemy turn limit is depleted
@@ -125,11 +146,11 @@ public class battleManager : MonoBehaviour
         bool loop = true;
 
         baseMenu.SetActive(false);
-        //this big ass one liner basically just randomly selects a response from the enemies responses
         yield return new WaitForSeconds(0.5f);
         //this while loop prevents the enemy from choosing the same response twice in a row
         while (loop)
         {
+            //this big ass one liner basically just randomly selects a response from the enemies responses
             enemyResponse = enemyUnit.chooseResponse(enemyUnit.responseCategories);
             if(enemyResponse != lastEnemyResponse){ loop = false; }
         }
@@ -145,14 +166,15 @@ public class battleManager : MonoBehaviour
             dialogue.setOpponentDialogue(enemyResponse.responseText);
         }
         yield return new WaitForSeconds(0.5f);
-        turnIndicatorObject.SetActive(false);
+        //turnIndicatorObject.SetActive(false);
         state = battleState.playerTurn;
         playerTurn();
     }
 
     void playerTurn()
     {
-        turnIndicatorObject.SetActive(true);
+        playerTurnIndicator.SetActive(true);
+        //turnIndicatorObject.SetActive(true);
         //set stim button to interactable
         stimButtonComponent.interactable = true;
         //Randomly assign stress values to each response
@@ -197,6 +219,7 @@ public class battleManager : MonoBehaviour
         if (state != battleState.playerTurn) { yield break; }
         //subtract proper stress level from player depending on stim
         stress -= stimValues[stimIndex] / 100;
+        if (stress < 0) stress = 0;
         mainCharAnim.animateStim(stimIndex);
         Debug.Log(mainCharAnim.currentAnimLength);
         yield return new WaitForSeconds(mainCharAnim.currentAnimLength);
@@ -208,7 +231,7 @@ public class battleManager : MonoBehaviour
             {
                 socialStatus = 0;
             }
-            turnIndicatorObject.SetActive(false);
+            //turnIndicatorObject.SetActive(false);
             StartCoroutine(stimFail());
             yield break;
         }
@@ -233,7 +256,6 @@ public class battleManager : MonoBehaviour
     //execute when player responds
     IEnumerator playerRespond(int moveIndex) 
     {
-        turnIndicatorObject.SetActive(false);
         state = 0;
         dialogue.setOpponentDialogue("");
 
@@ -245,42 +267,28 @@ public class battleManager : MonoBehaviour
         if (enemyResponse.correctResponses.Contains(moveIndex))
         {
             //streak 
-            socialStatus += 0.1f + (streak * streakAddition)/100;
+            socialStatus += (0.1f * enemyResponse.responseWeight) + (streak * streakAddition)/100;
             streak++;
         }
         else if (enemyResponse.decentResponses.Contains(moveIndex))
         {
-            socialStatus += 0.05f + (streak * streakAddition)/100;
+            socialStatus += (0.05f * enemyResponse.responseWeight) + (streak * streakAddition)/100;
             streak++;
         }
         else if (enemyResponse.badResponses.Contains(moveIndex))
         {
-            socialStatus -= 0.1f;
+            socialStatus -= 0.1f * enemyResponse.responseWeight;
             streak = 0;
         }
         else if (enemyResponse.veryBadResponses.Contains(moveIndex))
         {
-            socialStatus -= 0.2f;
+            socialStatus -= 0.2f * enemyResponse.responseWeight;
             streak = 0;
-        }
-        //if stress is overflowing, reset stress and give player mental shutdown
-        if (stress <= 0.0f)
-        {
-            stress = 0;
-        }
-        else if (stress >= 1.0f)
-        {
-            stress = 1;
-            yield return new WaitForSeconds(0.7f);
-            mainCharAnim.playDamageAnimation();
-            stress = 0;
-            isMentalShutdown = true;
-            lives--;
         }
 
         if (socialStatus < 0) 
         { 
-            socialStatus = 0; 
+            socialStatus = 0;
         }
         else if (socialStatus >= 1)
         {
@@ -304,8 +312,24 @@ public class battleManager : MonoBehaviour
             }
         }
 
+        //if stress is overflowing, reset stress and give player mental shutdown
+        if (stress <= 0.0f)
+        {
+            stress = 0;
+        }
+        else if (stress >= 1.0f)
+        {
+            stress = 1;
+            yield return new WaitForSeconds(0.7f);
+            mainCharAnim.playDamageAnimation();
+            stress = 0;
+            isMentalShutdown = true;
+            lives--;
+        }
+
         if (lives <= 0)
         {
+            yield return new WaitForSeconds(1);
             state = battleState.lose;
             lose();
             yield break;
@@ -338,7 +362,7 @@ public class battleManager : MonoBehaviour
             healthSlider.value = Mathf.Lerp(healthSlider.value, lives, sliderSmoothing * Time.deltaTime);
         }
         //updates turn indicator
-        switch (state)
+        /*switch (state)
         {
             case battleState.playerTurn:
                 turnIndicator.text = "Your Turn";
@@ -359,7 +383,7 @@ public class battleManager : MonoBehaviour
             default:
                 turnIndicator.text = "";
                 break;
-        }
+        }*/
 
         float turnPercent = (float)turnLimit / (float)turnLimitMax;
         if (turnPercent <= 1f/3f)
@@ -379,12 +403,12 @@ public class battleManager : MonoBehaviour
     //void for when the player wins
     void win() 
     {
-        turnIndicatorObject.SetActive(true);
+        winIndicator.SetActive(true);
     }
     //void for when the player loses
     void lose()
     {
-        turnIndicatorObject.SetActive(true);
+        loseIndicator.SetActive(true);
     }
 
     private void Update()

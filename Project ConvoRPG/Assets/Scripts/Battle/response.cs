@@ -22,6 +22,7 @@ public class response// : MonoBehaviour
 
     [Header("Response Variables")]
     public bool repeatable = true;
+    public float responseWeight = 1;[Tooltip("")]
 
     [HideInInspector]
     public bool hasBeenRepeated = false;
