@@ -22,8 +22,10 @@ public class gameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
-            return;
+            stress = instance.stress;
+            lives = instance.lives;
+            GameObject.Destroy(instance.gameObject);
+            instance = this;
         }
         Object.DontDestroyOnLoad(gameObject);
     }

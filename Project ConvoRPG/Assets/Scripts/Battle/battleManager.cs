@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public enum battleState {start, playerTurn, enemyTurn, win, lose}
@@ -58,7 +59,6 @@ public class battleManager : MonoBehaviour
     public Color[] patienceColors;
 
     [Header("Temporary")]
-    //TODO: make this dynamic (make the battle manager spawn the enemy to allow for different people to spawn in from the same screen)
     public GameObject enemy;
     Button firstSelectedButtonComponent;
     Button stimButtonComponent;
@@ -307,7 +307,7 @@ public class battleManager : MonoBehaviour
             {
                 state = battleState.win;
                 socialStatus = 1;
-                win();
+                StartCoroutine(win());
                 yield break;
             }
         }
@@ -401,9 +401,18 @@ public class battleManager : MonoBehaviour
         return;
     }
     //void for when the player wins
-    void win() 
+    IEnumerator win() 
     {
         winIndicator.SetActive(true);
+        //pass values from battle manager to game manager. Makes stress and lives persist between battles
+        /*I know doing multiple GameObject.Find functions is bad practice, but for some fucking reason the values won't pass
+         * unless I do this bullshit.
+         */
+        GameObject.Find("gameManagerObject").GetComponent<gameManager>().lives = lives;
+        GameObject.Find("gameManagerObject").GetComponent<gameManager>().stress = stress;
+        yield return new WaitForSeconds(5);
+        //TODO make this scene transition dynamic
+        SceneManager.LoadSceneAsync("Debug Menu");
     }
     //void for when the player loses
     void lose()
