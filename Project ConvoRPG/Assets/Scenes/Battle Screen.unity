@@ -3208,6 +3208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 767824424}
+  - component: {fileID: 767824430}
   - component: {fileID: 767824423}
   - component: {fileID: 767824422}
   - component: {fileID: 767824425}
@@ -3417,6 +3418,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 767824425}
   battleManagerObj: {fileID: 1600943469}
+--- !u!114 &767824430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767824421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a118f1faa61ce347a81807fbe1f913b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onAwake:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1834733328}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: battle1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &783025623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 230837409133902670, guid: a6310de18267d094c83e00d58c66de7f,
@@ -10917,18 +10944,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffects:
+  - categoryName: Battle Music
+    sounds:
+    - name: battle1
+      clip: {fileID: 8300000, guid: 5daa24d3a61236540ae296a0b7e49dae, type: 3}
+      volume: 1
+      pitch: 1
+      loop: 1
+      source: {fileID: 0}
+      audioGroup: {fileID: -3647028375242755325, guid: 242c4cd5e12c8ad499fbf913e3c2964f,
+        type: 2}
+  - categoryName: Battle Sound Effects
+    sounds: []
   - categoryName: UI
     sounds:
     - name: UI_Select
       clip: {fileID: 8300000, guid: 0c7fca498d960f246982e89acb4a78ec, type: 3}
       volume: 1
       pitch: 1
+      loop: 0
       source: {fileID: 0}
+      audioGroup: {fileID: -660690196398490913, guid: 242c4cd5e12c8ad499fbf913e3c2964f,
+        type: 2}
     - name: UI_Submit
       clip: {fileID: 8300000, guid: 0c7fca498d960f246982e89acb4a78ec, type: 3}
       volume: 1
       pitch: 1.5
+      loop: 0
       source: {fileID: 0}
+      audioGroup: {fileID: -660690196398490913, guid: 242c4cd5e12c8ad499fbf913e3c2964f,
+        type: 2}
 --- !u!4 &1834733329
 Transform:
   m_ObjectHideFlags: 0
