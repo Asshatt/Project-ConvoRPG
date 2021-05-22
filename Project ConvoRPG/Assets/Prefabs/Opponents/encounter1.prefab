@@ -1,0 +1,1398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &467161482724727953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1742884872309983400, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_Name
+      value: encounter1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884872309983407, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884873749297392, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3dd6ab379a310c40961c6ea802803c9,
+        type: 3}
+    - target: {fileID: 1742884873749297392, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884873749297392, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884873749297392, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742884873749297392, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].correctResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].decentResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].badResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].veryBadResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].instinctualResponse.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].correctResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].decentResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].badResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].veryBadResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].instinctualResponse.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].correctResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].decentResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].badResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].veryBadResponses.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].instinctualResponse.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].correctResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].decentResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].badResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].veryBadResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].instinctualResponse.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].correctResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].decentResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].badResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].veryBadResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].instinctualResponse.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].correctResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].decentResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].badResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].veryBadResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].instinctualResponse.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: name
+      value: Neil
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].categoryName
+      value: Phase 1 Responses
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseText
+      value: '*Joke*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].correctResponses.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].decentResponses.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].decentResponses.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].badResponses.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].veryBadResponses.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].veryBadResponses.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].veryBadResponses.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].instinctualResponse.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].instinctualResponse.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].instinctualResponse.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseWeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseText
+      value: '*Friendly Statement*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].correctResponses.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].decentResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].decentResponses.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].badResponses.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].veryBadResponses.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].veryBadResponses.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].veryBadResponses.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].instinctualResponse.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].instinctualResponse.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].instinctualResponse.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].decentResponses.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].badResponses.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseText
+      value: '*Earnest Compliment*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].decentResponses.Array.data[0]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].decentResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].decentResponses.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].badResponses.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].badResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].veryBadResponses.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].veryBadResponses.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].instinctualResponse.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].repeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].veryBadResponses.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].veryBadResponses.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].instinctualResponse.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseText
+      value: '*Inquiry about special interest*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].decentResponses.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].badResponses.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].badResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].veryBadResponses.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].veryBadResponses.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].veryBadResponses.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].veryBadResponses.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].instinctualResponse.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].instinctualResponse.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].correctResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].correctResponses.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].decentResponses.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].instinctualResponse.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseText
+      value: '*Comment about media*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].correctResponses.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].correctResponses.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].decentResponses.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].decentResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].badResponses.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].veryBadResponses.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].veryBadResponses.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].instinctualResponse.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].instinctualResponse.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].badResponses.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].instinctualResponse.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseText
+      value: '*Mildly insulting joke*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].correctResponses.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].correctResponses.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].decentResponses.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].decentResponses.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].badResponses.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].badResponses.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].veryBadResponses.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].instinctualResponse.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].instinctualResponse.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].veryBadResponses.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: turnLimit
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: hasMultiplePhases
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0]
+      value: '*Joke 1*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1]
+      value: '*Joke 2*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0]
+      value: '*Friendly Statement 1*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1]
+      value: '*Friendly Statement 2*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0]
+      value: So I heard you're into music eh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1]
+      value: Ever heard of the band Head Failure? I feel like you'd like them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0]
+      value: So, you heard about those new films coming out soon?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1]
+      value: Ah man. That reminds me, I never did finish reading Turmoil Roaming,
+        is it any good?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0]
+      value: Just have to say, your aesthetic practically screams shut-in haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1]
+      value: You remind me of a sitcom character haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0]
+      value: I like what you did with your hair.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2]
+      value: Finished watching Eins;Door recently. Damn good show huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1]
+      value: Where'd You get that coat? Looks neat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2]
+      value: "Those pants look a little screwed up don\u2019t ya think?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].repeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].repeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].repeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].text
+      value: That reminds me of the time I accidentally ate some dog food. Have no
+        idea how that happened haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].text
+      value: I like what you did with your hair.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].text
+      value: "Where\u2019d you get that coat? Looks neat."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].text
+      value: So I heard you're into music eh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].text
+      value: "Ever heard of the band Head Failure? I feel like you\u2019d like them."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].text
+      value: So, you heard about those new films coming out soon?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].text
+      value: Ah man. That reminds me, I never did finish reading Turmoil Roaming,
+        is it any good?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].text
+      value: Finished watching Eins;Door recently. Damn good show huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].text
+      value: Just have to say, your aesthetic practically screams shut-in haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].text
+      value: You remind me of that funny nerd sitcom character haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].text
+      value: "Those pants look a little screwed up don\u2019t ya think?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].text
+      value: So, what do ya think of this place?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].text
+      value: You alright? You're looking a little tense there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].text
+      value: Hey did you see that video that's been blowing up recently? It's hilarious
+        haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[0]
+      value: "Yeah. I have a whole list of recommendations if you\u2019re interested."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[1]
+      value: eh kinda, not like I have a hard drive filled with multiple variations
+        of a single album or anything.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[2]
+      value: Hell yeah I am! Ah man I have some really interesting in depth analysis
+        papers on a bunch of film soundtracks, some of the stuff on there is really
+        eye opening.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[0]
+      value: "That must\u2019ve been awkward haha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[1]
+      value: "You can\u2019t just mention that without saying how it tasted."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[2]
+      value: H-how do you even make that kind of mistake?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[3]
+      value: Eugh, that sounds disgusting.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[4]
+      value: Okay.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[0]
+      value: "Yeah I\u2019ve seen it. Pretty neat."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[1]
+      value: "It\u2019s not like it\u2019s practically impossible to avoid that thing
+        online or anything hehe."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[2]
+      value: "Yeah, kinda wish it\u2019d get off my feed. Gets annoying after a while."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[3]
+      value: Oh no not that video...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[4]
+      value: Yeah.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[0]
+      value: "I like what you\u2019ve, um\u2026 done with the place."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[1]
+      value: Ah yeah the purple is nice and definitely not tacky at all.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[2]
+      value: Frankly, this place kinda stinks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[3]
+      value: Not gonna lie, I want to get out of here as soon as possible, this place
+        is high key terrifying.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[4]
+      value: The decor is neat I guess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[0]
+      value: "Yeah, don\u2019t worry haha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[1]
+      value: Yeah definitely, not internally screaming at all.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[2]
+      value: Yeah, a little tense is kind of an understatement.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[3]
+      value: "Honestly, no and I\u2019m glad someone finally asked..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[4]
+      value: I dunno...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[0]
+      value: Thanks!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[1]
+      value: "Sure about that? It doesn\u2019t look greasy as heck to ya?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[2]
+      value: H-how?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[3]
+      value: "Y-you sure? It\u2019s kinda messy in my opinion..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[4]
+      value: Cool.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[0]
+      value: Thanks! Got it at a street market. They sell some good stuff there I
+        tell ya.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[1]
+      value: "Got it on a cheap street market. Should tell you all you need to know
+        about it\u2019s quality."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[2]
+      value: "I\u2019m not telling you. Trust me you don\u2019t want this."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[3]
+      value: "What do you mean? It\u2019s a little tacky don\u2019t ya think?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[4]
+      value: No.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[3]
+      value: Y-yeah? So what?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[4]
+      value: Yeah I guess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[0]
+      value: "Ah yeah I\u2019ve heard of them. Personal favorite of mine."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[1]
+      value: Self Titled best album haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[2]
+      value: "Oh yeah, I\u2019ve loved their stuff since they released their first
+        record! Have you ever listened to their demos from before that point? They
+        sound way more raw to me, It\u2019s amazing."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[3]
+      value: Y-yeah I have. W-why does that matter?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[4]
+      value: "Yeah I\u2019ve heard of them. They\u2019re neat."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[0]
+      value: "Haven\u2019t kept up with that in a while, what\u2019s going on there?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[1]
+      value: Yeah, I definitely have been in a theatre in the last few months. Totally...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[2]
+      value: Nah, not into that stuff.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[3]
+      value: "Uh, I haven\u2019t been keeping up. D-did I miss something or anything?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[4]
+      value: Not really.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[0]
+      value: Yeah, the series is great. Definitely worth reading for the first book
+        alone, and the sequels are pretty good too.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[1]
+      value: Nah just watch the botched film adaptation, haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[2]
+      value: Yes. But for the love of god PLEASE stay away from the adaptation, it
+        is abysmal.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[3]
+      value: "Y-yeah, It\u2019s one of my favorites. I-I know it\u2019s a little
+        unsubtle, but hey it\u2019s still pretty good okay?!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[4]
+      value: Eh, your choice I guess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[0]
+      value: "Yeah it is really good. Huge fan of the source material too, heavily
+        recommend reading that if you\u2019re into it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[1]
+      value: "Well yeah duh, it\u2019s kept its number two spot on the popularity
+        chart for a reason haha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[2]
+      value: "Hell yeah! The show does a lot of really interesting things with it\u2019s
+        soundtrack too, especially in the sequel series. Have some analysis papers
+        on the intricacies of this one too, you interested?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[3]
+      value: "Yeah it\u2019s pretty good. But for your sake, if you\u2019re interested
+        in the rest of the series, please don\u2019t watch the adaptations, they\u2019re
+        abysmal outside of this one. Please."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[4].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[4]
+      value: "It\u2019s alright I guess."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[0]
+      value: Yeah, admittedly it does, haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[1]
+      value: "Well, aren\u2019t we all nowadays? Haha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[2]
+      value: "Hey c\u2019mon my hair isn\u2019t that greasy."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[3]
+      value: I-it does?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[0].playerResponseTexts.Array.data[4]
+      value: "Yeah I guess you\u2019re right..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[0]
+      value: Yeah I guess I can see that, haha...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[1]
+      value: "qwazinger! O-or whatever that guy\u2019s catchphrase was..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[2]
+      value: "Hey, that guy\u2019s kind of an offensive representation of people
+        like me. I don\u2019t know how to describe it, but he\u2019s just extremely
+        problematic."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[3]
+      value: I-I do? Oh no, anything but that guy...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[1].playerResponseTexts.Array.data[4]
+      value: Whatever you say I guess...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[0]
+      value: "Yeah, my washer kinda conked out last week, so I haven\u2019t been
+        able to get much laundry done haha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[1]
+      value: "I mean hey, that\u2019s just a moniker of quality nowadays isn\u2019t
+        it? Haha."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[2]
+      value: "Hey c\u2019mon your clothes are literally the exact same brand."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[3]
+      value: Wait how? Ah man I thought I chose the right pair this time ughh...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[5].responseDisplayTexts.Array.data[2].playerResponseTexts.Array.data[4]
+      value: sure I guess...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 815c94b245decde42aa3930c8264c687, type: 3}

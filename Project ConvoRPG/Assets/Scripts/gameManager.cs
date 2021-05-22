@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class gameManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class gameManager : MonoBehaviour
         {
             stress = instance.stress;
             lives = instance.lives;
+            enemyPrefab = instance.enemyPrefab;
             GameObject.Destroy(instance.gameObject);
             instance = this;
         }
@@ -38,6 +40,18 @@ public class gameManager : MonoBehaviour
 
     public void battleTrigger() 
     {
-        SceneManager.LoadSceneAsync("Battle Screen");
+        StartCoroutine(sceneLoading("Battle Screen"));
+    }
+
+    public void loadScene(string scene) 
+    {
+        StartCoroutine(sceneLoading(scene));
+    }
+
+    IEnumerator sceneLoading(string scene) 
+    {
+        SceneManager.LoadSceneAsync("Loading Scene", LoadSceneMode.Additive);
+        yield return new WaitForSeconds(0.25f);
+        SceneManager.LoadSceneAsync(scene);
     }
 }

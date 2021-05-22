@@ -14,6 +14,15 @@ public class Sound
 
     public bool loop = false;
 
+    public enum soundType 
+    {
+        Sound_Effect,
+        Music,
+        Ambience
+    }
+
+    public soundType audioType;
+
     [HideInInspector]
     public AudioSource source;
 

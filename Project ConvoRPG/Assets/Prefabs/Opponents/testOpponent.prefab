@@ -335,6 +335,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[0].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[1].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[2].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[3].responseDisplayTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
       propertyPath: responses.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -646,12 +686,12 @@ PrefabInstance:
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responseCategories.Array.data[1].categoryName
-      value: Second Phase Test
+      value: Original #2
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responseCategories.Array.data[1].responses.Array.data[0].responseText
-      value: Phase 2 *Joke*
+      value: '*Joke*'
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
@@ -696,7 +736,7 @@ PrefabInstance:
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responseCategories.Array.data[1].responses.Array.data[1].responseText
-      value: Phase 2 *Joke that sounds like an insult*
+      value: '*Joke that sounds like an insult*'
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
@@ -741,7 +781,7 @@ PrefabInstance:
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responseCategories.Array.data[1].responses.Array.data[2].responseText
-      value: Phase 2 *Friendly statement*
+      value: '*Friendly statement*'
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
@@ -791,12 +831,52 @@ PrefabInstance:
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: responseCategories.Array.data[1].responses.Array.data[3].responseText
-      value: Phase 2 *Specific Question*
+      value: '*Specific Question*'
       objectReference: {fileID: 0}
     - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
         type: 3}
       propertyPath: hasMultiplePhases
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[0].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[3].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[1].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[0].responses.Array.data[2].responseWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[0].responseWeight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[1].responseWeight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[2].responseWeight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067791217945115781, guid: 815c94b245decde42aa3930c8264c687,
+        type: 3}
+      propertyPath: responseCategories.Array.data[1].responses.Array.data[3].responseWeight
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815c94b245decde42aa3930c8264c687, type: 3}

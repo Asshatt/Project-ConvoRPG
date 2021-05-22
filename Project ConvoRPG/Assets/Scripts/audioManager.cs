@@ -12,6 +12,25 @@ public class audioManager : MonoBehaviour
         public Sound[] sounds;
     }
 
+    private static audioManager _audio;
+
+    [HideInInspector]
+    //variable that holds the song thats currently playing
+    public AudioSource currentlyPlayingMusic;
+
+    public static audioManager audio 
+    {
+        get 
+        {
+            if (_audio == null)
+            {
+                _audio = GameObject.FindObjectOfType<audioManager>();
+            }
+            return _audio;
+        }
+    }
+    public AudioMixerSnapshot[] mixerSnapshots;
+
     public soundCategories[] soundEffects;
     // Start is called before the first frame update
     void Awake()
@@ -47,10 +66,19 @@ public class audioManager : MonoBehaviour
         if (sound != null)
         {
             sound.source.Play();
+            if (sound.audioType == Sound.soundType.Music) 
+            {
+                currentlyPlayingMusic = sound.source;
+            }
         }
         else
         {
             Debug.LogError("Sound " + name + " not found.");
         }
+    }
+
+    public void transitionToAudioSnapshot(int index) 
+    {
+        mixerSnapshots[index].TransitionTo(0.5f);
     }
 }

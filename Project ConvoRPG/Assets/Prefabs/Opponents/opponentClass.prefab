@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1742884872309983407}
   - component: {fileID: 9067791217945115781}
   m_Layer: 0
-  m_Name: opponent
+  m_Name: opponentClass
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,6 +44,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd963e3ff71ed8d4e932801348ed4479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Bob
+  responseCategories:
+  - categoryName: Easy
+    responses:
+    - responseText: '*Earnest Compliment*'
+      correctResponses: 00000000
+      decentResponses: 07000000
+      badResponses: 0500000006000000
+      veryBadResponses: 01000000020000000300000004000000
+      responseDisplayTexts:
+      - text: 
+        repeatable: 0
+        hasBeenShown: 0
+        playerResponseTexts: []
+      instinctualResponse: 0300000005000000
+      repeatable: 1
+      responseWeight: 1.25
+      hasBeenRepeated: 0
+    - responseText: '*Personal Anecdote*'
+      correctResponses: 00000000
+      decentResponses: 010000000600000007000000
+      badResponses: 0400000005000000
+      veryBadResponses: 0200000003000000
+      responseDisplayTexts:
+      - text: 
+        repeatable: 0
+        hasBeenShown: 0
+        playerResponseTexts: []
+      instinctualResponse: 0100000006000000
+      repeatable: 1
+      responseWeight: 1
+      hasBeenRepeated: 0
+  - categoryName: Medium
+    responses: []
+  hasMultiplePhases: 1
+  currentPhase: 0
+  isFinalPhase: 0
+  turnLimit: 99
 --- !u!1 &1742884873749297394
 GameObject:
   m_ObjectHideFlags: 0

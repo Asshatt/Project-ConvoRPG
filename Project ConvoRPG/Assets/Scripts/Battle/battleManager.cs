@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public enum battleState {start, playerTurn, enemyTurn, win, lose}
 
 public class battleManager : MonoBehaviour
 {
-    gameManager manager;
     public battleState state;
-
+    public static battleManager instance;
     [Header("Battle Variables")]
     public int lives = 3;
     public int[] stressRange = new int[2];
@@ -23,6 +23,7 @@ public class battleManager : MonoBehaviour
     public float streakAddition;
 
     [Header("Transforms")]
+    public GameObject playerTransform;
     public GameObject enemyTransform;
 
     [Header("Character Animation Variables")]
@@ -32,6 +33,7 @@ public class battleManager : MonoBehaviour
     //game objects to be defined in the inspector
     [Header("UI Objects")]
     public UI_opponentDialogue dialogue;
+    public UI_opponentDialogue playerDialogue;
     public GameObject socialStatusBar;
     public TextMeshProUGUI socialStatusLevelDisplay;
     public GameObject StressBar;
@@ -51,12 +53,18 @@ public class battleManager : MonoBehaviour
     public GameObject enemyTurnIndicator;
     public GameObject winIndicator;
     public GameObject loseIndicator;
+    public GameObject phaseIndicator;
 
-    [Header("UI Particle Systems")]
-    [Tooltip("Element 0 is the prefab for the particle, Element 1 is the transform where it will be instantiated")]
+    [Header("Damage Indicator Prefab")]
+    public GameObject damageIndicatorPrefab;
+    public Color32 stressTextColor;
+    public Color32 socialStatusTextColor;
 
     [Header("Misc")]
     public Color[] patienceColors;
+    [Tooltip("Light Effect that shows up when player chooses the best answer")]
+    public GameObject bestAnswerLight;
+    public GameObject glitchEffect;
 
     [Header("Temporary")]
     public GameObject enemy;
@@ -81,21 +89,23 @@ public class battleManager : MonoBehaviour
     Slider healthSlider;
     TextMeshProUGUI turnIndicator;
     RawImage patienceImage;
+    response.responseDisplayText chosenDisplayText;
     int streak = 0;
     //array that holds the stress values
     private float[] StressValues = new float[8];
-    bool isMentalShutdown = false;
+    public bool isMentalShutdown = false;
 
     //debug
     int turnCounter = -1;
     void Awake()
     {
-        manager = GameObject.Find("gameManagerObject").GetComponent<gameManager>();
+        instance = this;
+        //manager = GameObject.Find("gameManagerObject").GetComponent<gameManager>();
         //spawn in enemy that is stated by gameManager
-        enemy = GameObject.Instantiate(manager.enemyPrefab, enemyTransform.transform);
+        enemy = GameObject.Instantiate(gameManager.instance.enemyPrefab, enemyTransform.transform);
         //
-        stress = manager.stress;
-        lives = manager.lives;
+        stress = gameManager.instance.stress;
+        lives = gameManager.instance.lives;
         //parse components from gameobjects
         enemyUnit = enemy.GetComponent<EnemyUnit>();
         socialStatusSlider = socialStatusBar.GetComponent<Slider>();
@@ -121,8 +131,9 @@ public class battleManager : MonoBehaviour
     IEnumerator setupBattle() 
     {
         dialogue.setOpponentDialogue("");
+        playerDialogue.setOpponentDialogue("");
         //turnIndicatorObject.SetActive(false);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
         state = battleState.enemyTurn;
         StartCoroutine(enemyTurn());
     }
@@ -140,7 +151,7 @@ public class battleManager : MonoBehaviour
         {
             state = battleState.lose;
             dialogue.setOpponentDialogue("I've lost my patience with you.");
-            lose();
+            StartCoroutine(lose());
             yield break;
         }
         bool loop = true;
@@ -152,6 +163,8 @@ public class battleManager : MonoBehaviour
         {
             //this big ass one liner basically just randomly selects a response from the enemies responses
             enemyResponse = enemyUnit.chooseResponse(enemyUnit.responseCategories);
+            //TODO delete this debug code
+
             if(enemyResponse != lastEnemyResponse){ loop = false; }
         }
         lastEnemyResponse = enemyResponse;
@@ -159,11 +172,18 @@ public class battleManager : MonoBehaviour
         if (isMentalShutdown) 
         {
             dialogue.setOpponentDialogue("0̵̛̖͑̽̎̍̈̚-̶̡̞͎̟̮̑̇͜2̷̧͚̪̜̗̬͕͔͐3̴̧̛̺͚̗̼͖̮͔̟͍̓̃͒͂́̍̄̍̾͌̊̉͜͠@̴̗̑̋͌̽̄͘̚͝ͅ&̶̡̨̧͖̠͈͎̼͕̫͔̺͌̂ͅ#̵̢̡̩̗͙̳͓̲̇̓͒͒̓͛̐̏͐͑&̷̻͍̺͓͉͊̓̀̈̌́́̀̅͐̚͘͜͠*̵̡̘͈̼̼̗͎̞̰̘̳̗̬͈̹̊͑̊̀̏̾̊̿͋̚(̷̡̛̛̺̻͈̠̮͋̂͂̂́̈́̈̓͛̐͝͝)̸̡͔̯̼̦̙̩̐̓͐͑̅͗̉̓́!̵̡̛̭̟͉̙̝̞̯̐̓̃̽͆̏͑͘͠&̴̨̡̬͔͍̬̍͌̆");
-            isMentalShutdown = false;
         }
         else
-        { 
-            dialogue.setOpponentDialogue(enemyResponse.responseText);
+        {
+            chosenDisplayText = enemyResponse.chosenDisplayText();
+            if (chosenDisplayText == null)
+            {
+                dialogue.setOpponentDialogue(enemyResponse.responseText);
+            }
+            else
+            {
+                dialogue.setOpponentDialogue(chosenDisplayText.text);
+            }
         }
         yield return new WaitForSeconds(0.5f);
         //turnIndicatorObject.SetActive(false);
@@ -205,6 +225,13 @@ public class battleManager : MonoBehaviour
     public void OnPlayerDecision(int moveIndex) 
     {
         if (state != battleState.playerTurn) { return; }
+        if (isMentalShutdown)
+        {
+            //Mental Shutdown Set False
+            glitchEffect.SetActive(false);
+            audioManager.audio.transitionToAudioSnapshot(0);
+            isMentalShutdown = false;
+        }
         StartCoroutine(playerRespond(moveIndex));
     }
 
@@ -220,13 +247,39 @@ public class battleManager : MonoBehaviour
         //subtract proper stress level from player depending on stim
         stress -= stimValues[stimIndex] / 100;
         if (stress < 0) stress = 0;
+        
+        //spawn stress decrease indicator
+        GameObject stressDeduction = GameObject.Instantiate(damageIndicatorPrefab, playerTransform.transform);
+        stressDeduction.GetComponent<TextMeshPro>().color = stressTextColor;
+        stressDeduction.GetComponent<TextMeshPro>().text = "-" + stimValues[stimIndex].ToString();
+
         mainCharAnim.animateStim(stimIndex);
         Debug.Log(mainCharAnim.currentAnimLength);
         yield return new WaitForSeconds(mainCharAnim.currentAnimLength);
-        //if the penalty registers as true, subtract a value from social status and add stress
-        if (Random.Range(0f, 100f) <= stimProbability[stimIndex])
+        //contain the stim probability in a temporary value
+        //if the enemy response weight is less than one (if the response isn't important) then lower the probability of being spotted
+        float stimProbabilityTemp = stimProbability[stimIndex];
+        if(enemyResponse.responseWeight < 1f) 
         {
-            socialStatus -= stimSocialPenalty / 100;
+            stimProbabilityTemp *= enemyResponse.responseWeight;
+            Debug.Log(stimProbabilityTemp);
+        }
+        //if the penalty registers as true, subtract a value from social status and add stress
+        if (Random.Range(0f, 100f) <= stimProbabilityTemp)
+        {
+            //spawn social status text
+            GameObject socialText = GameObject.Instantiate(damageIndicatorPrefab, enemyTransform.transform);
+            socialText.GetComponent<TextMeshPro>().color = socialStatusTextColor;
+            if (stimIndex == 3)
+            {
+                socialText.GetComponent<TextMeshPro>().text = "-" + stimSocialPenalty.ToString();
+                socialStatus -= stimSocialPenalty / 100;
+            }
+            else
+            {
+                socialText.GetComponent<TextMeshPro>().text = "-" + (stimSocialPenalty/2).ToString();
+                socialStatus -= stimSocialPenalty / 200;
+            }
             if (socialStatus < 0)
             {
                 socialStatus = 0;
@@ -243,6 +296,13 @@ public class battleManager : MonoBehaviour
     IEnumerator stimFail() 
     {
         streak = 0;
+        if (isMentalShutdown)
+        {
+            //Mental Shutdown Set False
+            glitchEffect.SetActive(false);
+            audioManager.audio.transitionToAudioSnapshot(0);
+            isMentalShutdown = false;
+        }
         firstSelectedButtonComponent.Select();
         dialogue.setOpponentDialogue("?!");
         yield return new WaitForSeconds(0.01f);
@@ -256,35 +316,45 @@ public class battleManager : MonoBehaviour
     //execute when player responds
     IEnumerator playerRespond(int moveIndex) 
     {
+        float socialStatusChange = 0;
         state = 0;
         dialogue.setOpponentDialogue("");
 
         //Add the proper amount of stress depending on the move, and the value defined in playerTurn()
         mainCharAnim.animateResponse(moveIndex);
         yield return new WaitForSeconds(mainCharAnim.currentAnimLength + 0.15f);
-        stress += StressValues[moveIndex];
+        stress += Mathf.Floor(StressValues[moveIndex] * 100)/100;
         //check if the response is good, decent, bad, or very bad
         if (enemyResponse.correctResponses.Contains(moveIndex))
         {
             //streak 
-            socialStatus += (0.1f * enemyResponse.responseWeight) + (streak * streakAddition)/100;
+            socialStatusChange = Mathf.Floor((0.1f * enemyResponse.responseWeight) * 100)/100 + (streak * streakAddition) / 100;
+            audioManager.audio.Play("bestAnswer");
+            GameObject.Instantiate(bestAnswerLight, enemyTransform.transform);
             streak++;
         }
         else if (enemyResponse.decentResponses.Contains(moveIndex))
         {
-            socialStatus += (0.05f * enemyResponse.responseWeight) + (streak * streakAddition)/100;
+            socialStatusChange = Mathf.Floor((0.05f * enemyResponse.responseWeight) * 100)/100 + (streak * streakAddition)/100;
             streak++;
         }
         else if (enemyResponse.badResponses.Contains(moveIndex))
         {
-            socialStatus -= 0.1f * enemyResponse.responseWeight;
+            socialStatusChange = -1 * Mathf.Floor((0.1f * enemyResponse.responseWeight) * 100)/100;
             streak = 0;
         }
         else if (enemyResponse.veryBadResponses.Contains(moveIndex))
         {
-            socialStatus -= 0.2f * enemyResponse.responseWeight;
+            socialStatusChange = -1 * Mathf.Floor((0.2f * enemyResponse.responseWeight) * 100)/100;
             streak = 0;
         }
+        //add social status change
+        socialStatus += socialStatusChange;
+
+        //spawn social status text
+        GameObject socialText = GameObject.Instantiate(damageIndicatorPrefab, enemyTransform.transform);
+        socialText.GetComponent<TextMeshPro>().text = (socialStatusChange * 100).ToString();
+        socialText.GetComponent<TextMeshPro>().color = socialStatusTextColor;
 
         if (socialStatus < 0) 
         { 
@@ -294,8 +364,11 @@ public class battleManager : MonoBehaviour
         {
             if (enemyUnit.hasMultiplePhases && !enemyUnit.isFinalPhase)
             {
+                streak = 0;
                 socialStatus = 1;
                 yield return new WaitForSeconds(0.7f);
+                phaseIndicator.SetActive(true);
+                yield return new WaitForSeconds(1.3f);
                 socialStatus = 0;
                 enemyUnit.currentPhase++;
                 if(enemyUnit.currentPhase >= enemyUnit.responseCategories.Length - 1)
@@ -319,10 +392,13 @@ public class battleManager : MonoBehaviour
         }
         else if (stress >= 1.0f)
         {
+            //Mental Shutdown Set True
             stress = 1;
             yield return new WaitForSeconds(0.7f);
+            glitchEffect.SetActive(true);
             mainCharAnim.playDamageAnimation();
             stress = 0;
+            audioManager.audio.transitionToAudioSnapshot(1);
             isMentalShutdown = true;
             lives--;
         }
@@ -331,7 +407,7 @@ public class battleManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             state = battleState.lose;
-            lose();
+            StartCoroutine(lose());
             yield break;
         }
 
@@ -361,29 +437,6 @@ public class battleManager : MonoBehaviour
         {
             healthSlider.value = Mathf.Lerp(healthSlider.value, lives, sliderSmoothing * Time.deltaTime);
         }
-        //updates turn indicator
-        /*switch (state)
-        {
-            case battleState.playerTurn:
-                turnIndicator.text = "Your Turn";
-                break;
-
-            case battleState.enemyTurn:
-                turnIndicator.text = enemyUnit.name + "'s Turn";
-                break;
-
-            case battleState.win:
-                turnIndicator.text = "You Win!";
-                break;
-
-            case battleState.lose:
-                turnIndicator.text = "You Lose";
-                break;
-
-            default:
-                turnIndicator.text = "";
-                break;
-        }*/
 
         float turnPercent = (float)turnLimit / (float)turnLimitMax;
         if (turnPercent <= 1f/3f)
@@ -398,6 +451,78 @@ public class battleManager : MonoBehaviour
         {
             patienceImage.color = Color.Lerp(patienceImage.color, patienceColors[0], patienceColorSmoothing * Time.deltaTime);
         }
+
+        //updates player dialogue
+        //Checks name of currently selected button and changes the player dialogue accordingly
+        //yes this code is very bad, I might change it at some point, but don't count on that
+        if (chosenDisplayText != null)
+        {
+            switch (EventSystem.current.currentSelectedGameObject.name)
+            {
+                case "Friendly":
+                    if (isMentalShutdown)
+                    {
+                        playerDialogue.setOpponentDialogue("Yeah.");
+                    }
+                    else
+                    {
+                        playerDialogue.setOpponentDialogue(chosenDisplayText.playerResponseTexts[0]);
+                    }
+                    break;
+
+                case "Sarcastic":
+                    if (isMentalShutdown)
+                    {
+                        playerDialogue.setOpponentDialogue("Yeah?");
+                    }
+                    else
+                    {
+                        playerDialogue.setOpponentDialogue(chosenDisplayText.playerResponseTexts[1]);
+                    }
+                    break;
+
+                case "Aggressive":
+                    if (isMentalShutdown)
+                    {
+                        playerDialogue.setOpponentDialogue("What?!");
+                    }
+                    else
+                    {
+                        playerDialogue.setOpponentDialogue(chosenDisplayText.playerResponseTexts[2]);
+                    }
+                    break;
+
+                case "Fearful":
+                    if (isMentalShutdown)
+                    {
+                        playerDialogue.setOpponentDialogue("What...?");
+                    }
+                    else
+                    {
+                        playerDialogue.setOpponentDialogue(chosenDisplayText.playerResponseTexts[3]);
+                    }
+                    break;
+
+                case "Deadpan":
+                    if (isMentalShutdown)
+                    {
+                        playerDialogue.setOpponentDialogue("Y-yup...");
+                    }
+                    else
+                    {
+                        playerDialogue.setOpponentDialogue(chosenDisplayText.playerResponseTexts[4]);
+                    }
+                    break;
+
+                case "":
+                case null:
+                    Debug.LogError("Dialogue not set");
+                    break;
+                default:
+                    playerDialogue.setOpponentDialogue("");
+                    break;
+            }
+        }
         return;
     }
     //void for when the player wins
@@ -405,25 +530,28 @@ public class battleManager : MonoBehaviour
     {
         winIndicator.SetActive(true);
         //pass values from battle manager to game manager. Makes stress and lives persist between battles
-        /*I know doing multiple GameObject.Find functions is bad practice, but for some fucking reason the values won't pass
-         * unless I do this bullshit.
-         */
-        GameObject.Find("gameManagerObject").GetComponent<gameManager>().lives = lives;
-        GameObject.Find("gameManagerObject").GetComponent<gameManager>().stress = stress;
+
+        gameManager.instance.lives = lives;
+        gameManager.instance.stress = stress;
         yield return new WaitForSeconds(5);
         //TODO make this scene transition dynamic
         SceneManager.LoadSceneAsync("Debug Menu");
     }
     //void for when the player loses
-    void lose()
+    IEnumerator lose()
     {
         loseIndicator.SetActive(true);
+
+        gameManager.instance.lives = 3;
+        gameManager.instance.stress = 0.5f;
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadSceneAsync("Debug Menu");
     }
 
     private void Update()
     {
         //TODO make this more efficient/performant
         updateUI();
-        //Debug.Log(enemyUnit.isFinalPhase);
+        Debug.Log(turnCounter);
     }
 }

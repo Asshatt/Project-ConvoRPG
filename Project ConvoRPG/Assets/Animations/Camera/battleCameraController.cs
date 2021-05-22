@@ -6,16 +6,11 @@ public class battleCameraController : MonoBehaviour
 {
     public Animator animator;
     public GameObject battleManagerObj;
-    battleManager manager;
 
-    private void Start()
-    {
-        manager = battleManagerObj.GetComponent<battleManager>();
-    }
     // Update is called once per frame
     void Update()
     {
-        switch (manager.state) 
+        switch (battleManager.instance.state) 
         {
             case battleState.playerTurn:
                 animator.SetBool("isPlayerTurn", true);

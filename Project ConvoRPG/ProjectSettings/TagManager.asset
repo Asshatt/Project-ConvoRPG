@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Effects
+    uniqueID: 409358593
+    locked: 0
   - name: UI Particles
     uniqueID: 2459379069
     locked: 0
